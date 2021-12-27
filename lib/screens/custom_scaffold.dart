@@ -48,7 +48,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
           //*home
           HomeScreen(),
           //*Lenght
-          const LenghtScreen(color: Colors.red),
+          const LenghtScreen(),
           //*Mass
           MassScreen(),
           //*surface
