@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:imperial_to_metric_flutter/custom_icons_icons.dart';
 import 'package:imperial_to_metric_flutter/screens/conversors/lenght.dart';
 import 'package:imperial_to_metric_flutter/screens/conversors/mass.dart';
 import 'package:imperial_to_metric_flutter/screens/conversors/surface.dart';
@@ -82,23 +83,23 @@ class _CustomScaffoldState extends State<CustomScaffold> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
+            icon: Icon(CustomIcons.length),
             label: 'Longitud',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(CustomIcons.mass),
             label: 'Masa',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(CustomIcons.surface),
             label: 'Superficie',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(CustomIcons.volume),
             label: 'Volumen',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(CustomIcons.temp),
             label: 'Temperatura',
           ),
         ],
