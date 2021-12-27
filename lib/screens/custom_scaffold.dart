@@ -24,7 +24,17 @@ class _CustomScaffoldState extends State<CustomScaffold> {
     return Scaffold(
       //* Appbar
       appBar: AppBar(
-        title: Text('Material App Bar $currentPage'),
+        title: currentPage == 0
+            ? const Text('Home')
+            : currentPage == 1
+                ? const Text('Longitud')
+                : currentPage == 2
+                    ? const Text('Masa')
+                    : currentPage == 3
+                        ? const Text('Superficie')
+                        : currentPage == 4
+                            ? const Text('Volumen')
+                            : const Text('Temperatura'),
         elevation: 0,
       ),
 
