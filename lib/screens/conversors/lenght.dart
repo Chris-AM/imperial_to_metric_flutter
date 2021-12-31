@@ -10,12 +10,13 @@ class LenghtScreen extends StatefulWidget {
 
 class _LenghtScreenState extends State<LenghtScreen> {
   //* this variable holds the value of the selected DropdownButton
-  String _currentOption = 'Elije una opción';
+  String _currentOption = 'Elige una opción';
   String _inputValue = '';
-  FocusNode _focusInput = FocusNode();
+  final FocusNode _focusInput = FocusNode();
   @override
   Widget build(BuildContext context) {
     return KeyboardActions(
+      tapOutsideBehavior: TapOutsideBehavior.opaqueDismiss,
       config: KeyboardActionsConfig(
         keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
         nextFocus: false,
@@ -49,8 +50,9 @@ class _LenghtScreenState extends State<LenghtScreen> {
                     },
                     validator: (inputValue) {
                       try {
-                        if (inputValue == null)
+                        if (inputValue == null) {
                           return 'Este campo es requerido';
+                        }
                         return double.parse(inputValue) > 0
                             ? null
                             : 'El valor debe ser mayor a 0';
@@ -60,7 +62,7 @@ class _LenghtScreenState extends State<LenghtScreen> {
                     },
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     decoration: InputDecoration(
-                      hintText: _currentOption == 'Elije una opción'
+                      hintText: _currentOption == 'Elige una opción'
                           ? 'Selecciona una opción de la lista'
                           : 'Ingresa el valor en $_currentOption',
                     ),
@@ -76,11 +78,11 @@ class _LenghtScreenState extends State<LenghtScreen> {
               hint: Text(_currentOption),
               //* List of items to convert
               items: <String>[
-                "mil",
-                "pulgadas",
+                "Mil",
+                "Pulgadas",
                 "Pie",
                 "Yarda",
-                "Rood",
+                "Rod",
                 "Cadena",
                 "Furlong",
                 "Milla",
@@ -120,28 +122,56 @@ class RenderOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (option) {
-      case 'mil':
+      case 'Mil':
         return Container(
           padding: const EdgeInsets.only(top: 20),
           child: Column(
             children: [
               const Text('Mil'),
-              const Text('1 mil = 0.000254 pulgadas'),
-              const Text('1 mil = 0.0000254 pie'),
-              const Text('1 mil = 0.000621371 yarda'),
-              const Text('1 mil = 0.000000621371 rood'),
-              MilToMetric(mil: value)
+              MilToMetric(mil: value),
             ],
           ),
         );
       case 'pulgadas':
-        return Text('option ==> $option');
+        return Container(
+          padding: const EdgeInsets.only(top: 20),
+          child: Column(
+            children: [
+              const Text('Pulgadas'),
+              InchesToMetric(inches: value),
+            ],
+          ),
+        );
       case 'Pie':
-        return Text('option ==> $option');
+        return Container(
+          padding: const EdgeInsets.only(top: 20),
+          child: Column(
+            children: [
+              const Text('Pie'),
+              FeetToMetric(feet: value),
+            ],
+          ),
+        );
       case 'Yarda':
-        return Text('option ==> $option');
-      case 'Rood':
-        return Text('option ==> $option');
+        return Container(
+          padding: const EdgeInsets.only(top: 20),
+          child: Column(
+            children: [
+              const Text('Yarda'),
+              YardToMetric(yard: value),
+            ],
+          ),
+        );
+      case 'Rod':
+        return Container(
+          padding: const EdgeInsets.only(top: 20),
+          child: Column(
+            children: [
+              const Text('Yarda'),
+              RodToMetric(rod: value),
+            ],
+          ),
+        );
       case 'Cadena':
         return Text('option ==> $option');
       case 'Furlong':
@@ -160,7 +190,7 @@ class RenderOption extends StatelessWidget {
   }
 }
 
-//* Mils Convertor
+//* Mils to metric
 class MilToMetric extends StatefulWidget {
   final String mil;
 
@@ -217,3 +247,227 @@ class _MilToMetricState extends State<MilToMetric> {
     );
   }
 }
+
+//* inches to metric
+
+class InchesToMetric extends StatefulWidget {
+  final String inches;
+  const InchesToMetric({Key? key, required this.inches}) : super(key: key);
+
+  @override
+  _InchesToMetricState createState() => _InchesToMetricState();
+}
+
+class _InchesToMetricState extends State<InchesToMetric> {
+  void _convertion(BuildContext context) {
+    var inputOption = widget.inches;
+    var convertedInput = double.parse(inputOption);
+    double cmResult = double.parse((convertedInput * 2.54).toStringAsFixed(5));
+    double dmResult = double.parse((convertedInput * 0.254).toStringAsFixed(5));
+    double mResult = double.parse((convertedInput * 0.0254).toStringAsFixed(5));
+    double kmResult =
+        double.parse((convertedInput * 0.0000254).toStringAsFixed(10));
+
+    var alertDialog = AlertDialog(
+      title: const Text('sus resultados'),
+      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text('Cerrar'),
+        )
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return alertDialog;
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 30.0),
+      child: ElevatedButton(
+        onPressed: () {
+          _convertion(context);
+        },
+        child: const Text('Calcular'),
+      ),
+    );
+  }
+}
+
+//* Feet to metric
+class FeetToMetric extends StatefulWidget {
+  final String feet;
+  const FeetToMetric({Key? key, required this.feet}) : super(key: key);
+
+  @override
+  _FeetToMetricState createState() => _FeetToMetricState();
+}
+
+class _FeetToMetricState extends State<FeetToMetric> {
+  void _convertion(BuildContext context) {
+    var inputOption = widget.feet;
+    var convertedInput = double.parse(inputOption);
+    double cmResult = double.parse((convertedInput * 30.48).toStringAsFixed(5));
+    double dmResult = double.parse((convertedInput * 3.048).toStringAsFixed(5));
+    double mResult = double.parse((convertedInput * 0.3048).toStringAsFixed(5));
+    double kmResult =
+        double.parse((convertedInput * 0.0003048).toStringAsFixed(10));
+
+    var alertDialog = AlertDialog(
+      title: const Text('sus resultados'),
+      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text('Cerrar'),
+        )
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return alertDialog;
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 30.0),
+      child: ElevatedButton(
+        onPressed: () {
+          _convertion(context);
+        },
+        child: const Text('Calcular'),
+      ),
+    );
+  }
+}
+
+//* Yard to metric
+class YardToMetric extends StatefulWidget {
+  final String yard;
+  const YardToMetric({Key? key, required this.yard}) : super(key: key);
+
+  @override
+  _YardToMetricState createState() => _YardToMetricState();
+}
+
+class _YardToMetricState extends State<YardToMetric> {
+  void _convertion(BuildContext context) {
+    var inputOption = widget.yard;
+    var convertedInput = double.parse(inputOption);
+    double cmResult = double.parse((convertedInput * 91.44).toStringAsFixed(5));
+    double dmResult = double.parse((convertedInput * 9.144).toStringAsFixed(5));
+    double mResult = double.parse((convertedInput * 0.9144).toStringAsFixed(5));
+    double kmResult =
+        double.parse((convertedInput * 0.0009144).toStringAsFixed(10));
+
+    var alertDialog = AlertDialog(
+      title: const Text('sus resultados'),
+      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text('Cerrar'),
+        )
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return alertDialog;
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 30.0),
+      child: ElevatedButton(
+        onPressed: () {
+          _convertion(context);
+        },
+        child: const Text('Calcular'),
+      ),
+    );
+  }
+}
+
+//* Rod to metric
+class RodToMetric extends StatefulWidget {
+  final String rod;
+  const RodToMetric({Key? key, required this.rod}) : super(key: key);
+
+  @override
+  _RodToMetricState createState() => _RodToMetricState();
+}
+
+class _RodToMetricState extends State<RodToMetric> {
+  void _convertion(BuildContext context) {
+    var inputOption = widget.rod;
+    var convertedInput = double.parse(inputOption);
+    double cmResult = double.parse((convertedInput * 502.92).toStringAsFixed(5));
+    double dmResult = double.parse((convertedInput * 50.292).toStringAsFixed(5));
+    double mResult = double.parse((convertedInput * 5.0292).toStringAsFixed(5));
+    double kmResult =
+        double.parse((convertedInput * 0.0050292).toStringAsFixed(5));
+
+    var alertDialog = AlertDialog(
+      title: const Text('sus resultados'),
+      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text('Cerrar'),
+        )
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return alertDialog;
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 30.0),
+      child: ElevatedButton(
+        onPressed: () {
+          _convertion(context);
+        },
+        child: const Text('Calcular'),
+      ),
+    );
+  }
+}
+
+//* Chain to metric
+//* Furlong to metric
+//* Mile to metric
+//* League to metric
+//* Link to metric
+//* Fathom to metric
