@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length.screen/mil.screen/mil_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_calculation.dart';
 
 class MilScreen extends StatelessWidget {
   final String milInput;
