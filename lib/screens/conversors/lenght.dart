@@ -44,7 +44,7 @@ class _LenghtScreenState extends State<LenghtScreen> {
                         const TextInputType.numberWithOptions(decimal: true),
                     onChanged: (inputValue) {
                       setState(() {
-                        _inputValue = inputValue;
+                        _inputValue = (inputValue).replaceAll(',', '.');
                       });
                       print('now I have as _inputValue ==> $inputValue');
                     },
@@ -132,7 +132,8 @@ class RenderOption extends StatelessWidget {
             ],
           ),
         );
-      case 'pulgadas':
+
+      case 'Pulgadas':
         return Container(
           padding: const EdgeInsets.only(top: 20),
           child: Column(
@@ -167,7 +168,7 @@ class RenderOption extends StatelessWidget {
           padding: const EdgeInsets.only(top: 20),
           child: Column(
             children: [
-              const Text('Yarda'),
+              const Text('Rod'),
               RodToMetric(rod: value),
             ],
           ),
@@ -206,16 +207,16 @@ class _MilToMetricState extends State<MilToMetric> {
     var convertedInput = double.parse(inputOption);
     double cmResult =
         double.parse((convertedInput * 0.00254).toStringAsFixed(5));
-    double dmResult =
-        double.parse((convertedInput * 0.000254).toStringAsFixed(5));
     double mResult =
         double.parse((convertedInput * 0.0000254).toStringAsFixed(5));
+    double dmResult =
+        double.parse((convertedInput * 0.000254).toStringAsFixed(5));
     double kmResult =
         double.parse((convertedInput * 0.00000000254).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
-      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      content: Text('$cmResult cm\n$mResult m\n$dmResult dm\n$kmResult km'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
@@ -263,14 +264,14 @@ class _InchesToMetricState extends State<InchesToMetric> {
     var inputOption = widget.inches;
     var convertedInput = double.parse(inputOption);
     double cmResult = double.parse((convertedInput * 2.54).toStringAsFixed(5));
-    double dmResult = double.parse((convertedInput * 0.254).toStringAsFixed(5));
     double mResult = double.parse((convertedInput * 0.0254).toStringAsFixed(5));
+    double dmResult = double.parse((convertedInput * 0.00254).toStringAsFixed(5));
     double kmResult =
         double.parse((convertedInput * 0.0000254).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
-      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      content: Text('$cmResult cm\n$mResult m\n$dmResult dm\n$kmResult km'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
@@ -317,14 +318,14 @@ class _FeetToMetricState extends State<FeetToMetric> {
     var inputOption = widget.feet;
     var convertedInput = double.parse(inputOption);
     double cmResult = double.parse((convertedInput * 30.48).toStringAsFixed(5));
-    double dmResult = double.parse((convertedInput * 3.048).toStringAsFixed(5));
+    double dmResult = double.parse((convertedInput * 0.03048).toStringAsFixed(5));
     double mResult = double.parse((convertedInput * 0.3048).toStringAsFixed(5));
     double kmResult =
         double.parse((convertedInput * 0.0003048).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
-      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      content: Text('$cmResult cm\n$mResult m\n$dmResult dm\n$kmResult km'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
@@ -371,14 +372,14 @@ class _YardToMetricState extends State<YardToMetric> {
     var inputOption = widget.yard;
     var convertedInput = double.parse(inputOption);
     double cmResult = double.parse((convertedInput * 91.44).toStringAsFixed(5));
-    double dmResult = double.parse((convertedInput * 9.144).toStringAsFixed(5));
+    double dmResult = double.parse((convertedInput * 0.09144).toStringAsFixed(5));
     double mResult = double.parse((convertedInput * 0.9144).toStringAsFixed(5));
     double kmResult =
         double.parse((convertedInput * 0.0009144).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
-      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      content: Text('$cmResult cm\n$mResult m\n$dmResult dm\n$kmResult km'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
@@ -422,17 +423,19 @@ class RodToMetric extends StatefulWidget {
 
 class _RodToMetricState extends State<RodToMetric> {
   void _convertion(BuildContext context) {
-    var inputOption = widget.rod;
+    var inputOption = (widget.rod).replaceAll(',', '.');
     var convertedInput = double.parse(inputOption);
-    double cmResult = double.parse((convertedInput * 502.92).toStringAsFixed(5));
-    double dmResult = double.parse((convertedInput * 50.292).toStringAsFixed(5));
-    double mResult = double.parse((convertedInput * 5.0292).toStringAsFixed(5));
+    double cmResult =
+        double.parse((convertedInput * 502.92).toStringAsFixed(3));
+    double dmResult =
+        double.parse((convertedInput * 0.50292).toStringAsFixed(3));
+    double mResult = double.parse((convertedInput * 5.0292).toStringAsFixed(3));
     double kmResult =
-        double.parse((convertedInput * 0.0050292).toStringAsFixed(5));
+        double.parse((convertedInput * 0.0050292).toStringAsFixed(3));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
-      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
+      content: Text('$cmResult cm\n$mResult m\n$dmResult dm\n$kmResult km'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
