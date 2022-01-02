@@ -25,7 +25,7 @@ class _MilToMetricState extends State<MilToMetric> {
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
-      content: Text('$cmResult cm\n$mResult m\n$dmResult dm\n$kmResult km'),
+      content: Text('$cmResult cm\n$dmResult dm\n$mResult m\n$kmResult km'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
@@ -57,4 +57,3 @@ class _MilToMetricState extends State<MilToMetric> {
     );
   }
 }
-
