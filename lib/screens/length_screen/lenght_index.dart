@@ -4,6 +4,7 @@ import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foo
 import 'package:imperial_to_metric_flutter/screens/length_screen/furlong_screen/furlong_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/mile_screen/mile_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/rod_screen/rod_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/yard_screen/yard_screen.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
@@ -143,7 +144,7 @@ class RenderOption extends StatelessWidget {
       case 'Furlong':
         return FurlongScreen(furlongInput: value);
       case 'Milla':
-        return Text('option ==> $option');
+        return MileScreen(mileInput: value);
       case 'Legua':
         return Text('option ==> $option');
       case 'Link':
@@ -153,21 +154,6 @@ class RenderOption extends StatelessWidget {
       default:
         return const Text('Elige una opción');
     }
-  }
-}
-
-//* Mile to metric
-class MileToMetric extends StatefulWidget {
-  const MileToMetric({Key? key}) : super(key: key);
-
-  @override
-  _MileToMetricState createState() => _MileToMetricState();
-}
-
-class _MileToMetricState extends State<MileToMetric> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
 
