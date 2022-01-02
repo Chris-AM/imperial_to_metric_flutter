@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foot_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/yard.screen/yard_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/yard_screen/yard_screen.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 class LenghtScreen extends StatefulWidget {
