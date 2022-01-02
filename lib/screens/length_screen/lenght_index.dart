@@ -3,6 +3,7 @@ import 'package:imperial_to_metric_flutter/screens/length_screen/chain_screen/ch
 import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foot_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/furlong_screen/furlong_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/league.screen/league_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mile_screen/mile_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/rod_screen/rod_screen.dart';
@@ -146,7 +147,7 @@ class RenderOption extends StatelessWidget {
       case 'Milla':
         return MileScreen(mileInput: value);
       case 'Legua':
-        return Text('option ==> $option');
+        return LeagueScreen(leagueInput: value);
       case 'Link':
         return Text('option ==> $option');
       case 'Braza':
@@ -154,21 +155,6 @@ class RenderOption extends StatelessWidget {
       default:
         return const Text('Elige una opción');
     }
-  }
-}
-
-//* League to metric
-class LeagueToMetric extends StatefulWidget {
-  const LeagueToMetric({Key? key}) : super(key: key);
-
-  @override
-  _LeagueToMetricState createState() => _LeagueToMetricState();
-}
-
-class _LeagueToMetricState extends State<LeagueToMetric> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
 
