@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/chain_screen/chain_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foot_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/furlong_screen/furlong_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/rod_screen/rod_screen.dart';
@@ -140,7 +141,7 @@ class RenderOption extends StatelessWidget {
       case 'Cadena':
         return ChainScreen(chainInput: value);
       case 'Furlong':
-        return Text('option ==> $option');
+        return FurlongScreen(furlongInput: value);
       case 'Milla':
         return Text('option ==> $option');
       case 'Legua':
@@ -152,22 +153,6 @@ class RenderOption extends StatelessWidget {
       default:
         return const Text('Elige una opción');
     }
-  }
-}
-
-//* Furlong to metric
-class FurlongToMetric extends StatefulWidget {
-  String furlong;
-  FurlongToMetric({Key? key, required this.furlong}) : super(key: key);
-
-  @override
-  _FurlongToMetricState createState() => _FurlongToMetricState();
-}
-
-class _FurlongToMetricState extends State<FurlongToMetric> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
 
