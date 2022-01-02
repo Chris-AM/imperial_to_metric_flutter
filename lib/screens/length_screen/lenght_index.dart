@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foot_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/rod_screen/rod_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/yard_screen/yard_screen.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
@@ -135,15 +136,7 @@ class RenderOption extends StatelessWidget {
       case 'Yarda':
         return YardScreen(yardInput: value);
       case 'Rod':
-        return Container(
-          padding: const EdgeInsets.only(top: 20),
-          child: Column(
-            children: [
-              const Text('Rod'),
-              RodToMetric(rod: value),
-            ],
-          ),
-        );
+        return RodScreen(rodInput: value);
       case 'Cadena':
         return Text('option ==> $option');
       case 'Furlong':
@@ -159,62 +152,6 @@ class RenderOption extends StatelessWidget {
       default:
         return const Text('Elige una opción');
     }
-  }
-}
-
-//* Rod to metric
-class RodToMetric extends StatefulWidget {
-  final String rod;
-  const RodToMetric({Key? key, required this.rod}) : super(key: key);
-
-  @override
-  _RodToMetricState createState() => _RodToMetricState();
-}
-
-class _RodToMetricState extends State<RodToMetric> {
-  void _convertion(BuildContext context) {
-    var inputOption = (widget.rod).replaceAll(',', '.');
-    var convertedInput = double.parse(inputOption);
-    double cmResult =
-        double.parse((convertedInput * 502.92).toStringAsFixed(3));
-    double dmResult =
-        double.parse((convertedInput * 0.50292).toStringAsFixed(3));
-    double mResult = double.parse((convertedInput * 5.0292).toStringAsFixed(3));
-    double kmResult =
-        double.parse((convertedInput * 0.0050292).toStringAsFixed(3));
-
-    var alertDialog = AlertDialog(
-      title: const Text('sus resultados'),
-      content: Text('$cmResult cm\n$mResult m\n$dmResult dm\n$kmResult km'),
-      actions: <Widget>[
-        TextButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: const Text('Cerrar'),
-        )
-      ],
-    );
-
-    showDialog(
-      context: context,
-      builder: (context) {
-        return alertDialog;
-      },
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 30.0),
-      child: ElevatedButton(
-        onPressed: () {
-          _convertion(context);
-        },
-        child: const Text('Calcular'),
-      ),
-    );
   }
 }
 
