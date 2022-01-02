@@ -3,7 +3,7 @@ import 'package:imperial_to_metric_flutter/screens/length_screen/chain_screen/ch
 import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foot_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/furlong_screen/furlong_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/league.screen/league_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/league_screen/league_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mile_screen/mile_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/rod_screen/rod_screen.dart';
