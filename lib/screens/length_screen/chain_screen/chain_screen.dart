@@ -13,6 +13,35 @@ class ChainScreen extends StatelessWidget {
         children: [
           const Text('Cadenas'),
           ChainToMetric(chain: chainInput),
+          Container(
+            padding: const EdgeInsets.only(top: 20),
+            width: 300,
+            child: Column(
+              children: [
+                const Text(
+                  'Equivalencia:',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.5,
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: Column(
+                    children: const [
+                      Text('0,004166666666666 leguas'),
+                      Text('0,0125 millas'),
+                      Text('0,1 furlongs'),
+                      Text('4 rods'),
+                      Text('22 yardas'),
+                      Text('66 pies'),
+                      Text('100 links'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
