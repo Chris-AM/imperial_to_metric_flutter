@@ -4,6 +4,7 @@ import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foo
 import 'package:imperial_to_metric_flutter/screens/length_screen/furlong_screen/furlong_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/league_screen/league_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/link.screen/link_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/mile_screen/mile_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/rod_screen/rod_screen.dart';
@@ -149,27 +150,12 @@ class RenderOption extends StatelessWidget {
       case 'Legua':
         return LeagueScreen(leagueInput: value);
       case 'Link':
-        return Text('option ==> $option');
+        return LinkScreen(linkInput: value);
       case 'Braza':
         return Text('option ==> $option');
       default:
         return const Text('Elige una opción');
     }
-  }
-}
-
-//* Link to metric
-class LinkToMetric extends StatefulWidget {
-  const LinkToMetric({Key? key}) : super(key: key);
-
-  @override
-  _LinkToMetricState createState() => _LinkToMetricState();
-}
-
-class _LinkToMetricState extends State<LinkToMetric> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
 
