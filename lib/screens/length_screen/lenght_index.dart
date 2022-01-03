@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/chain_screen/chain_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/fathom_screen/fathom_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foot_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/furlong_screen/furlong_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
@@ -97,7 +98,7 @@ class _LenghtScreenState extends State<LenghtScreen> {
                 "Milla",
                 "Legua",
                 "Link",
-                "Braza",
+                "Braza (US)",
               ].map<DropdownMenuItem<String>>(
                 (String value) {
                   return DropdownMenuItem<String>(
@@ -115,7 +116,7 @@ class _LenghtScreenState extends State<LenghtScreen> {
           ),
           RenderOption(
             option: _currentOption,
-            value: _inputValue,
+            inputValue: _inputValue,
           ),
         ],
       ),
@@ -125,51 +126,36 @@ class _LenghtScreenState extends State<LenghtScreen> {
 
 class RenderOption extends StatelessWidget {
   final String option;
-  final String value;
-  const RenderOption({Key? key, required this.option, required this.value})
+  final String inputValue;
+  const RenderOption({Key? key, required this.option, required this.inputValue})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     switch (option) {
       case 'Mil':
-        return MilScreen(milInput: value);
+        return MilScreen(milInput: inputValue);
       case 'Pulgadas':
-        return InchScreen(inchesInput: value);
+        return InchScreen(inchesInput: inputValue);
       case 'Pie':
-        return FootScreen(footInput: value);
+        return FootScreen(footInput: inputValue);
       case 'Yarda':
-        return YardScreen(yardInput: value);
+        return YardScreen(yardInput: inputValue);
       case 'Rod':
-        return RodScreen(rodInput: value);
+        return RodScreen(rodInput: inputValue);
       case 'Cadena':
-        return ChainScreen(chainInput: value);
+        return ChainScreen(chainInput: inputValue);
       case 'Furlong':
-        return FurlongScreen(furlongInput: value);
+        return FurlongScreen(furlongInput: inputValue);
       case 'Milla':
-        return MileScreen(mileInput: value);
+        return MileScreen(mileInput: inputValue);
       case 'Legua':
-        return LeagueScreen(leagueInput: value);
+        return LeagueScreen(leagueInput: inputValue);
       case 'Link':
-        return LinkScreen(linkInput: value);
-      case 'Braza':
-        return Text('option ==> $option');
+        return LinkScreen(linkInput: inputValue);
+      case 'Braza (US)':
+        return FathomScreen(fathomInput: inputValue);
       default:
         return const Text('Elige una opción');
     }
-  }
-}
-
-//* Fathom to metric
-class FathomToMetric extends StatefulWidget {
-  const FathomToMetric({Key? key}) : super(key: key);
-
-  @override
-  _FathomToMetricState createState() => _FathomToMetricState();
-}
-
-class _FathomToMetricState extends State<FathomToMetric> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
