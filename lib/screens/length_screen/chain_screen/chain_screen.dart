@@ -35,7 +35,7 @@ class ChainScreen extends StatelessWidget {
                       Text('66 pies'),
                       Text('20.1168 metros'),
                       Text('201.168 decimetros'),
-                      Text('100 0.0201168'),
+                      Text('0.0201168 kilometros'),
                     ],
                   ),
                 ),
