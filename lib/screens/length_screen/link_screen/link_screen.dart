@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/link.screen/link_calculator.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/link_screen/link_calculator.dart';
 
 class LinkScreen extends StatelessWidget {
   final String linkInput;
