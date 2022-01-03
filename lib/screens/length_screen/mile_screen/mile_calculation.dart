@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
 //* Mile to metric
 class MileToMetric extends StatefulWidget {
@@ -43,13 +44,26 @@ class _MileToMetricState extends State<MileToMetric> {
     );
   }
 
+  void _badAlertDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const ErrorDialog();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 30.0),
       child: ElevatedButton(
         onPressed: () {
-          _convertion(context);
+          try {
+            _convertion(context);
+          } catch (e) {
+            _badAlertDialog(context);
+          }
         },
         child: const Text('Calcular'),
       ),

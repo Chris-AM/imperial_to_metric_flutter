@@ -1,5 +1,6 @@
 //* Fathom to metric
 import 'package:flutter/material.dart';
+import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
 class FathomToMetric extends StatefulWidget {
   final String fathom;
@@ -43,13 +44,26 @@ class _FathomToMetricState extends State<FathomToMetric> {
     );
   }
 
+  void _badAlertDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const ErrorDialog();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 30.0),
       child: ElevatedButton(
         onPressed: () {
-          _convertion(context);
+          try {
+            _convertion(context);
+          } catch (e) {
+            _badAlertDialog(context);
+          }
         },
         child: const Text('Calcular'),
       ),

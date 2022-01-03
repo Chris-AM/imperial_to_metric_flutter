@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
 //* Link to metric
 class LinkToMetric extends StatefulWidget {
@@ -13,10 +14,14 @@ class _LinkToMetricState extends State<LinkToMetric> {
   void _convertion(BuildContext context) {
     var inputOption = widget.link;
     var convertedInput = double.parse(inputOption);
-    double cmResult = double.parse((convertedInput * 20.1168).toStringAsFixed(5));
-    double dmResult = double.parse((convertedInput * 2.01168).toStringAsFixed(5));
-    double mResult = double.parse((convertedInput * 0.201168).toStringAsFixed(5));
-    double kmResult = double.parse((convertedInput * 0.000201168).toStringAsFixed(10));
+    double cmResult =
+        double.parse((convertedInput * 20.1168).toStringAsFixed(5));
+    double dmResult =
+        double.parse((convertedInput * 2.01168).toStringAsFixed(5));
+    double mResult =
+        double.parse((convertedInput * 0.201168).toStringAsFixed(5));
+    double kmResult =
+        double.parse((convertedInput * 0.000201168).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
@@ -39,13 +44,26 @@ class _LinkToMetricState extends State<LinkToMetric> {
     );
   }
 
+  void _badAlertDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const ErrorDialog();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 30.0),
       child: ElevatedButton(
         onPressed: () {
-          _convertion(context);
+          try {
+            _convertion(context);
+          } catch (e) {
+            _badAlertDialog(context);
+          }
         },
         child: const Text('Calcular'),
       ),
