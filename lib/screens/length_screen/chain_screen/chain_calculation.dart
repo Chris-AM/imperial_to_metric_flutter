@@ -15,13 +15,13 @@ class _ChainToMetricState extends State<ChainToMetric> {
     var inputOption = widget.chain;
     var convertedInput = double.parse(inputOption);
     double cmResult =
-        double.parse((convertedInput * 2011.68).toStringAsFixed(3));
+        double.parse((convertedInput * 2011.68).toStringAsFixed(5));
     double dmResult =
-        double.parse((convertedInput * 201.168).toStringAsFixed(3));
+        double.parse((convertedInput * 201.168).toStringAsFixed(5));
     double mResult =
-        double.parse((convertedInput * 20.1168).toStringAsFixed(3));
+        double.parse((convertedInput * 20.1168).toStringAsFixed(5));
     double kmResult =
-        double.parse((convertedInput * 0.0201168).toStringAsFixed(5));
+        double.parse((convertedInput * 0.0201168).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
