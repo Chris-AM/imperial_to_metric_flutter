@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/chain_screen/chain_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/fathom_screen/fathom_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/foot_screen/foot_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/furlong_screen/furlong_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/league_screen/league_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/link_screen/link_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/mil_screen/mil_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/mile_screen/mile_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/rod_screen/rod_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/yard_screen/yard_screen.dart';
+import 'package:imperial_to_metric_flutter/screens/length_screen/length.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 class LenghtScreen extends StatefulWidget {
