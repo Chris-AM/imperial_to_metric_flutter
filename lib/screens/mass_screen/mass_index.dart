@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imperial_to_metric_flutter/screens/mass_screen/mass.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 class MassScreen extends StatefulWidget {
@@ -122,7 +123,7 @@ class RenderOption extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (option) {
       case 'Grano':
-      // return MilScreen(milInput: inputValue);
+        return GrainScreen(grainIput: inputValue);
       case 'Tonelada Larga':
       // return InchScreen(inchesInput: inputValue);
       case 'Tonelada Corta':
