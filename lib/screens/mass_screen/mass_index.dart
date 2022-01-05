@@ -125,7 +125,7 @@ class RenderOption extends StatelessWidget {
       case 'Grano':
         return GrainScreen(grainIput: inputValue);
       case 'Tonelada Larga':
-      // return InchScreen(inchesInput: inputValue);
+        return LongTonScreen(longTonInput: inputValue);
       case 'Tonelada Corta':
       // return FootScreen(footInput: inputValue);
       case 'Onza':

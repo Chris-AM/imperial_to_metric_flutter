@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class GrainToMetric extends StatefulWidget {
-  final String grain;
-  const GrainToMetric({Key? key, required this.grain}) : super(key: key);
+//* Long Ton (UK)
+class LongTonToMetric extends StatefulWidget {
+  final String longTon;
+  const LongTonToMetric({Key? key, required this.longTon}) : super(key: key);
 
   @override
-  _GrainToMetricState createState() => _GrainToMetricState();
+  _LongTonToMetricState createState() => _LongTonToMetricState();
 }
 
-class _GrainToMetricState extends State<GrainToMetric> {
+class _LongTonToMetricState extends State<LongTonToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.grain;
+    var inputOption = widget.longTon;
     var convertedInput = double.parse(inputOption);
     double mgResult =
-        double.parse((convertedInput * 64.79891).toStringAsFixed(5));
+        double.parse((convertedInput * 1016046908.8).toStringAsFixed(5));
     double gResult =
-        double.parse((convertedInput * 0.06479891).toStringAsFixed(5));
+        double.parse((convertedInput * 1016046.9088).toStringAsFixed(5));
     double kgResult =
-        double.parse((convertedInput * 0.0000647989).toStringAsFixed(10));
-    
+        double.parse((convertedInput * 1016.0469088).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
