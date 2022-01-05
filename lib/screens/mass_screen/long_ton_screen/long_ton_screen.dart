@@ -33,6 +33,7 @@ class LongTonScreen extends StatelessWidget {
                       Text('80 Quarter (UK)'),
                       Text('2.24 Kilo Toneladas'),
                       Text('2240 Libras'),
+                      Text('0.8928571429 Tonaladas Cortas'),
                     ],
                   ),
                 ),
