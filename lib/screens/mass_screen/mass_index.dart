@@ -127,7 +127,7 @@ class RenderOption extends StatelessWidget {
       case 'Tonelada Larga':
         return LongTonScreen(longTonInput: inputValue);
       case 'Tonelada Corta':
-      // return FootScreen(footInput: inputValue);
+        return ShortTonScreen(shortTonInput: inputValue);
       case 'Onza':
       // return YardScreen(yardInput: inputValue);
       case 'Libra':
