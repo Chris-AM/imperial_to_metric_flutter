@@ -31,7 +31,7 @@ class LongTonScreen extends StatelessWidget {
                     children: const [
                       Text('89.6 Quarter (US)'),
                       Text('80 Quarter (UK)'),
-                      Text('2.24 Kilo Toneladas'),
+                      Text('2.24 Kilo Libras'),
                       Text('2240 Libras'),
                       Text('1.12 Tonaladas Cortas'),
                     ],
