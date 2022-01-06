@@ -133,7 +133,7 @@ class RenderOption extends StatelessWidget {
       case 'Acre':
         return AcreScreen(acreInput: inputValue);
       case 'Homestead':
-      // return ShortQuarterScreen(shortQuarterInput: inputValue);
+        return HomesteadScreen(homeSteadInput: inputValue);
       case 'Millaˆ2':
       // return KilopoundScreen(kilopoundInput: inputValue);
       case 'Leguaˆ2':
