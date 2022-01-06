@@ -125,7 +125,7 @@ class RenderOption extends StatelessWidget {
       case 'Pieˆ2':
         return SquareFootScreen(squareFoot: inputValue);
       case 'Yardaˆ2':
-      // return ShortTonScreen(shortTonInput: inputValue);
+        return SquareYardScreen(squareYardInput: inputValue);
       case 'Rodˆ2':
       // return OunceScreen(ounceInput: inputValue);
       case 'Rood':
