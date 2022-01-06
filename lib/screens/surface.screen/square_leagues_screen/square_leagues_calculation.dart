@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class AcreToMetric extends StatefulWidget {
-  final String acre;
-  const AcreToMetric({Key? key, required this.acre}) : super(key: key);
+class SquareLeaguesToMetric extends StatefulWidget {
+  final String squareLeague;
+  const SquareLeaguesToMetric({Key? key, required this.squareLeague}) : super(key: key);
 
   @override
-  _AcreToMetricState createState() => _AcreToMetricState();
+  _SquareLeaguesToMetricState createState() => _SquareLeaguesToMetricState();
 }
 
-class _AcreToMetricState extends State<AcreToMetric> {
+class _SquareLeaguesToMetricState extends State<SquareLeaguesToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.acre;
+    var inputOption = widget.squareLeague;
     var convertedInput = double.parse(inputOption);
     double cmSqr =
-        double.parse((convertedInput * 40468564.224).toStringAsFixed(5));
+        double.parse((convertedInput * 25899881103).toStringAsFixed(5));
     double dmSqr =
-        double.parse((convertedInput * 404685.64224).toStringAsFixed(5));
+        double.parse((convertedInput * 258998811.03).toStringAsFixed(5));
     double mSqr =
-        double.parse((convertedInput * 4046.8564224).toStringAsFixed(5));
+        double.parse((convertedInput * 2589988.1103).toStringAsFixed(5));
     double kmSqr =
-        double.parse((convertedInput * 0.0040468564).toStringAsFixed(10));
+        double.parse((convertedInput * 2.5899881103).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
