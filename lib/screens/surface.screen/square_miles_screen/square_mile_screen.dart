@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/surface.screen/square_leagues_screen/square_leagues_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/surface.screen/square_miles_screen/square_mile_calculation.dart';
 
-class SquareLeagueScreen extends StatelessWidget {
-  final String squareLeagueInput;
-  const SquareLeagueScreen({Key? key, required this.squareLeagueInput})
+class SquareMileScreen extends StatelessWidget {
+  final String squareMileInput;
+  const SquareMileScreen({Key? key, required this.squareMileInput})
       : super(key: key);
 
   @override
@@ -13,7 +13,7 @@ class SquareLeagueScreen extends StatelessWidget {
       child: Column(
         children: [
           const Text('Millaˆ2'),
-          SquareLeaguesToMetric(squareLeague: squareLeagueInput),
+          SquareMilesToMetric(squareMile: squareMileInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,

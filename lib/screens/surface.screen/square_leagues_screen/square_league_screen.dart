@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/grain_screen/grain_calculation.dart';
-import 'package:imperial_to_metric_flutter/screens/surface.screen/acre_screen/acre_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/surface.screen/square_leagues_screen/square_league_calculation.dart';
 
-class AcreScreen extends StatelessWidget {
-  final String acreInput;
-  const AcreScreen({Key? key, required this.acreInput}) : super(key: key);
+class SquareLeagueScreen extends StatelessWidget {
+  final String squareLeagueInput;
+  const SquareLeagueScreen({Key? key, required this.squareLeagueInput})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,9 @@ class AcreScreen extends StatelessWidget {
       child: Column(
         children: [
           const Text('Acre'),
-          AcreToMetric(acre: acreInput),
+          SquareLeagueToMetric(
+            squareLeague: squareLeagueInput,
+          ),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -30,11 +32,11 @@ class AcreScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('0.0015625 Millasˆ2'),
-                      Text('4840 Yardasˆ2'),
-                      Text('43560 Piesˆ2'),
-                      Text('6272640 Pulgadasˆ2'),
-                      Text('4 Rood')
+                      Text('11.9186 Millasˆ2'),
+                      Text('36919055.3602393 Yardasˆ2'),
+                      Text('332271498.24215364456 Piesˆ2'),
+                      Text('7627.93 Acre'),
+                      Text('47,674341312741 Homestead')
                     ],
                   ),
                 ),

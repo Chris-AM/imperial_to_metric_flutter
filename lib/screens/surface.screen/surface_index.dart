@@ -135,9 +135,9 @@ class RenderOption extends StatelessWidget {
       case 'Homestead':
         return HomesteadScreen(homeSteadInput: inputValue);
       case 'Millaˆ2':
-        return SquareLeagueScreen(squareLeagueInput: inputValue);
+        return SquareMileScreen(squareMileInput: inputValue);
       case 'Leguaˆ2':
-      // return QuintalScreen(quintalInput: inputValue);
+        return SquareLeagueScreen(squareLeagueInput: inputValue);
       default:
         return const Text('Elige una opción');
     }
