@@ -133,7 +133,7 @@ class RenderOption extends StatelessWidget {
       case 'Libra':
         return PoundScreen(poundInput: inputValue);
       case 'Cuarto Largo':
-      // return ChainScreen(chainInput: inputValue);
+        return LongQuarterScreen(longQuarterInput: inputValue);
       case 'Cuarto Corto':
       // return FurlongScreen(furlongInput: inputValue);
       case 'Kilo Libra':

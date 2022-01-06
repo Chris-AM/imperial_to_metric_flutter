@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/grain_screen/grain_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/mass_screen/long_quarter_screen/long_quarter_calculation.dart';
 
-class GrainScreen extends StatelessWidget {
-  final String grainIput;
-  const GrainScreen({Key? key, required this.grainIput}) : super(key: key);
+class LongQuarterScreen extends StatelessWidget {
+  final String longQuarterInput;
+  const LongQuarterScreen({Key? key, required this.longQuarterInput})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +12,8 @@ class GrainScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Cadenas'),
-          GrainToMetric(grain: grainIput),
+          const Text('Cuarto largo'),
+          LongQuarterToMetric(longQuarter: longQuarterInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -29,10 +30,10 @@ class GrainScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('64798.91 microgramos'),
-                      Text('64798910 nanógramos'),
-                      Text('0.0022857143 Onzas'),
-                      Text('0.0001428571 Libras'),
+                      Text('1.12 Cuarto Corto (US)'),
+                      Text('0.28 Kilo Libras'),
+                      Text('28 Libras'),
+                      Text('448 Onzas'),
                     ],
                   ),
                 ),
