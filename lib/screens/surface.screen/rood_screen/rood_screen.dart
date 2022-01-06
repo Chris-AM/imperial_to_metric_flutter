@@ -11,7 +11,7 @@ class RoodScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Acre'),
+          const Text('Rood'),
           RoodToMetric(rood: roodInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
