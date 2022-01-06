@@ -11,7 +11,7 @@ class GrainScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Cadenas'),
+          const Text('Granos'),
           GrainToMetric(grain: grainIput),
           Container(
             padding: const EdgeInsets.only(top: 20),

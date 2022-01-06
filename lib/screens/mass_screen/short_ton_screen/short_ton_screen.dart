@@ -12,7 +12,7 @@ class ShortTonScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Cadenas'),
+          const Text('Tonelada Corta (US)'),
           ShortTonToMetric(shortTon: shortTonInput),
           Container(
             padding: const EdgeInsets.only(top: 20),

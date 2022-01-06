@@ -11,7 +11,7 @@ class OunceScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Cadenas'),
+          const Text('Onzas'),
           OunceToMetric(ounce: ounceInput),
           Container(
             padding: const EdgeInsets.only(top: 20),

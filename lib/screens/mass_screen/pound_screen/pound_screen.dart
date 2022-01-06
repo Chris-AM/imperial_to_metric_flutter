@@ -11,7 +11,7 @@ class PoundScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Cadenas'),
+          const Text('Libras'),
           PoundToMetric(pound: poundInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
