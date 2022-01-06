@@ -12,7 +12,7 @@ class LongQuarterScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Cuarto largo'),
+          const Text('Cuarto largo (UK)'),
           LongQuarterToMetric(longQuarter: longQuarterInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
