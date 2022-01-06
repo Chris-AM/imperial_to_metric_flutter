@@ -121,7 +121,7 @@ class RenderOption extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (option) {
       case 'Pulgadaˆ2':
-      // return GrainScreen(grainIput: inputValue);
+        return SquareInchesScreen(sqaureInches: inputValue);
       case 'Pieˆ2':
       // return LongTonScreen(longTonInput: inputValue);
       case 'Yardaˆ2':
