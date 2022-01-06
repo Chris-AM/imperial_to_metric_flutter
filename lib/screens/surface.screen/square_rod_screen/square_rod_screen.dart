@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/grain_screen/grain_calculation.dart';
-import 'package:imperial_to_metric_flutter/screens/surface.screen/acre_screen/acre_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/surface.screen/square_rod_screen/square_rod_calculation.dart';
 
-class AcreScreen extends StatelessWidget {
-  final String acreInput;
-  const AcreScreen({Key? key, required this.acreInput}) : super(key: key);
+class SqaureRodScreen extends StatelessWidget {
+  final String squareRodInput;
+  const SqaureRodScreen({Key? key, required this.squareRodInput})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class AcreScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Acre'),
-          AcreToMetric(acre: acreInput),
+          const Text('Rodˆ2'),
+          SquareRodToMetric(squareRod: squareRodInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -30,11 +30,11 @@ class AcreScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('0.0015625 Millasˆ2'),
-                      Text('4840 Yardasˆ2'),
-                      Text('43560 Piesˆ2'),
-                      Text('6272640 Pulgadasˆ2'),
-                      Text('4 Rood')
+                      Text('0.0000097656 Millasˆ2'),
+                      Text('30.25 Yardasˆ2'),
+                      Text('272.25 Piesˆ2'),
+                      Text('39204 Pulgadasˆ2'),
+                      Text('0.025 Rood')
                     ],
                   ),
                 ),
