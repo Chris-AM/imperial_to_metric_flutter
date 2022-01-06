@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/grain_screen/grain_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/mass_screen/pound_screen/pound_calculation.dart';
 
-class GrainScreen extends StatelessWidget {
-  final String grainIput;
-  const GrainScreen({Key? key, required this.grainIput}) : super(key: key);
+class PoundScreen extends StatelessWidget {
+  final String poundInput;
+  const PoundScreen({Key? key, required this.poundInput}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class GrainScreen extends StatelessWidget {
       child: Column(
         children: [
           const Text('Cadenas'),
-          GrainToMetric(grain: grainIput),
+          PoundToMetric(pound: poundInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -29,10 +29,11 @@ class GrainScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('64798.91 microgramos'),
-                      Text('64798910 nanógramos'),
-                      Text('0.0022857143 Onzas'),
-                      Text('0.0001428571 Libras'),
+                      Text('0.001 kilo libras'),
+                      Text('7000 Granos'),
+                      Text('16 Onzas'),
+                      Text('0.04 Cuartos Cortos'),
+                      Text('0.0357142857 Cuartos Largos'),
                     ],
                   ),
                 ),

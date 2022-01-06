@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class GrainToMetric extends StatefulWidget {
-  final String grain;
-  const GrainToMetric({Key? key, required this.grain}) : super(key: key);
+class PoundToMetric extends StatefulWidget {
+  final String pound;
+  const PoundToMetric({Key? key, required this.pound}) : super(key: key);
 
   @override
-  _GrainToMetricState createState() => _GrainToMetricState();
+  _PoundToMetricState createState() => _PoundToMetricState();
 }
 
-class _GrainToMetricState extends State<GrainToMetric> {
+class _PoundToMetricState extends State<PoundToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.grain;
+    var inputOption = widget.pound;
     var convertedInput = double.parse(inputOption);
     double mgResult =
-        double.parse((convertedInput * 64.79891).toStringAsFixed(5));
+        double.parse((convertedInput * 453592.37).toStringAsFixed(5));
     double gResult =
-        double.parse((convertedInput * 0.06479891).toStringAsFixed(5));
+        double.parse((convertedInput * 453.59237).toStringAsFixed(5));
     double kgResult =
-        double.parse((convertedInput * 0.0000647989).toStringAsFixed(10));
+        double.parse((convertedInput * 0.45359237).toStringAsFixed(10));
     
 
     var alertDialog = AlertDialog(
