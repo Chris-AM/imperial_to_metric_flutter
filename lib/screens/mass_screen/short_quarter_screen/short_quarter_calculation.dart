@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class GrainToMetric extends StatefulWidget {
-  final String grain;
-  const GrainToMetric({Key? key, required this.grain}) : super(key: key);
+class ShortQuarterToMetric extends StatefulWidget {
+  final String shortQuarter;
+  const ShortQuarterToMetric({Key? key, required this.shortQuarter})
+      : super(key: key);
 
   @override
-  _GrainToMetricState createState() => _GrainToMetricState();
+  _ShortQuarterToMetricState createState() => _ShortQuarterToMetricState();
 }
 
-class _GrainToMetricState extends State<GrainToMetric> {
+class _ShortQuarterToMetricState extends State<ShortQuarterToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.grain;
+    var inputOption = widget.shortQuarter;
     var convertedInput = double.parse(inputOption);
     double mgResult =
-        double.parse((convertedInput * 64.79891).toStringAsFixed(5));
+        double.parse((convertedInput * 11339809.25).toStringAsFixed(5));
     double gResult =
-        double.parse((convertedInput * 0.06479891).toStringAsFixed(5));
+        double.parse((convertedInput * 11339.80925).toStringAsFixed(5));
     double kgResult =
-        double.parse((convertedInput * 0.0000647989).toStringAsFixed(10));
-    
+        double.parse((convertedInput * 11.33980925).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
