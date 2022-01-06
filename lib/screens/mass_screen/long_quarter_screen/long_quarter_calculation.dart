@@ -17,11 +17,11 @@ class _LongQuarterToMetricState extends State<LongQuarterToMetric> {
     var inputOption = widget.longQuarter;
     var convertedInput = double.parse(inputOption);
     double mgResult =
-        double.parse((convertedInput * 13916032475).toStringAsFixed(5));
+        double.parse((convertedInput * 12700586.36).toStringAsFixed(5));
     double gResult =
-        double.parse((convertedInput * 13916032.475).toStringAsFixed(5));
+        double.parse((convertedInput * 12700.58636).toStringAsFixed(5));
     double kgResult =
-        double.parse((convertedInput * 13916.032475).toStringAsFixed(10));
+        double.parse((convertedInput * 12.70058636).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
