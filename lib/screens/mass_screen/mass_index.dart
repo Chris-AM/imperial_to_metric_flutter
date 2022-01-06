@@ -139,7 +139,7 @@ class RenderOption extends StatelessWidget {
       case 'Kilo Libra':
         return KilopoundScreen(kilopoundInput: inputValue);
       case 'Quintal':
-
+        return QuintalScreen(quintalInput: inputValue);
       default:
         return const Text('Elige una opción');
     }

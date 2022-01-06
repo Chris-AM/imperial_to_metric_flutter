@@ -6,4 +6,4 @@ export 'package:imperial_to_metric_flutter/screens/mass_screen/pound_screen/poun
 export 'package:imperial_to_metric_flutter/screens/mass_screen/long_quarter_screen/long_quarter_screen.dart';
 export 'package:imperial_to_metric_flutter/screens/mass_screen/short_quarter_screen/short_quarter_screen.dart';
 export 'package:imperial_to_metric_flutter/screens/mass_screen/kilopound_screen/kilopound_screen.dart';
-
+export 'package:imperial_to_metric_flutter/screens/mass_screen/quintal_screen/quintal_screen.dart';

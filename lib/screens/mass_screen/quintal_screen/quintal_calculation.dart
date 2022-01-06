@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class GrainToMetric extends StatefulWidget {
-  final String grain;
-  const GrainToMetric({Key? key, required this.grain}) : super(key: key);
+class QuintalToMetric extends StatefulWidget {
+  final String quintal;
+  const QuintalToMetric({Key? key, required this.quintal}) : super(key: key);
 
   @override
-  _GrainToMetricState createState() => _GrainToMetricState();
+  _QuintalToMetricState createState() => _QuintalToMetricState();
 }
 
-class _GrainToMetricState extends State<GrainToMetric> {
+class _QuintalToMetricState extends State<QuintalToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.grain;
+    var inputOption = widget.quintal;
     var convertedInput = double.parse(inputOption);
     double mgResult =
-        double.parse((convertedInput * 64.79891).toStringAsFixed(5));
-    double gResult =
-        double.parse((convertedInput * 0.06479891).toStringAsFixed(5));
-    double kgResult =
-        double.parse((convertedInput * 0.0000647989).toStringAsFixed(10));
-    
+        double.parse((convertedInput * 100000000).toStringAsFixed(5));
+    double gResult = double.parse((convertedInput * 100000).toStringAsFixed(5));
+    double kgResult = double.parse((convertedInput * 100).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
