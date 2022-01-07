@@ -30,10 +30,10 @@ class CubicMileScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('43560 Pieˆ3'),
-                      Text('75271680 Pulgadaˆ3'),
-                      Text('0.0000002959280303 Millaˆ3'),
-                      Text('1613.3333333 Yardaˆ3'),
+                      Text('147197952000 Pieˆ3'),
+                      Text('254358061055996 Pulgadaˆ3'),
+                      Text('5451776000 Yardaˆ3'),
+                      Text('3379200 Acre-Pie'),
                     ],
                   ),
                 ),
