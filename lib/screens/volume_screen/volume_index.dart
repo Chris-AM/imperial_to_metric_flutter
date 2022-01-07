@@ -227,9 +227,9 @@ class RenderOption extends StatelessWidget {
       //solids
       case 'Pulgadaˆ3':
         return CubicInchesScreen(cubicInchesInput: inputValue);
-      case 'Pieˆ2':
-      //return ;
-      case 'Yardaˆ2':
+      case 'Pieˆ3':
+        return CubicFootScreen(cubicFootInput: inputValue);
+      case 'Yardaˆ3':
       // return SquareYardScreen(squareYardInput: inputValue);
       case 'Acre-Pie':
         return AcreFootScreen(acreFootInput: inputValue);
