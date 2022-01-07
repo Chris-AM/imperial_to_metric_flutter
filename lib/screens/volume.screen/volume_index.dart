@@ -11,9 +11,8 @@ class VolumeScreen extends StatefulWidget {
 class _VolumeScreenState extends State<VolumeScreen> {
   //* this variable holds the value of the selected DropdownButton
   String _currentOption = 'Elige una opción';
-  String tipeValue = '';
-  String toConvertValue = '';
-  bool disabledDropdown = true;
+  String _tipeValue = 'Tipo de Volumen';
+  bool _disabledDropdown = true;
   List<DropdownMenuItem<String>> menuItems = [];
   final solids = {
     '1': 'Pulgadaˆ3',
@@ -87,14 +86,14 @@ class _VolumeScreenState extends State<VolumeScreen> {
       populateLiquids();
     }
     setState(() {
-      tipeValue = _value;
-      disabledDropdown = false;
+      _tipeValue = _value;
+      _disabledDropdown = false;
     });
   }
 
   void secondValueChanged(_value) {
     setState(() {
-      tipeValue = _value;
+      _currentOption = _value;
     });
   }
 
@@ -130,7 +129,7 @@ class _VolumeScreenState extends State<VolumeScreen> {
                         const TextInputType.numberWithOptions(decimal: true),
                     onChanged: (inputValue) {
                       setState(() {
-                        tipeValue = (inputValue).replaceAll(',', '.');
+                        _tipeValue = (inputValue).replaceAll(',', '.');
                       });
                     },
                     validator: (inputValue) {
@@ -148,7 +147,7 @@ class _VolumeScreenState extends State<VolumeScreen> {
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     decoration: InputDecoration(
                       hintText: _currentOption == 'Elige una opción'
-                          ? 'Selecciona una opción de la lista'
+                          ? 'Primero elige el tipo de volumen'
                           : 'Ingresa el valor en $_currentOption',
                     ),
                   ),
@@ -185,27 +184,26 @@ class _VolumeScreenState extends State<VolumeScreen> {
                       ),
                     ],
                     onChanged: (_value) => valueChanged(_value),
-                    hint: const Text('Tipo de volumen'),
+                    hint: Text(_tipeValue),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: DropdownButton<String>(
                     items: menuItems,
-                    onChanged: disabledDropdown
+                    onChanged: _disabledDropdown
                         ? null
                         : (_value) => secondValueChanged(_value),
-                    hint: const Text('Unidad a convertir'),
+                    hint: Text(_currentOption),
                     disabledHint: const Text('Elija un tipo de volumen'),
                   ),
                 ),
-                Text(tipeValue),
               ],
             ),
           ),
           RenderOption(
             option: _currentOption,
-            inputValue: tipeValue,
+            inputValue: _tipeValue,
           ),
         ],
       ),
@@ -221,8 +219,8 @@ class RenderOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (option) {
-      case 'Pulgadaˆ2':
-      // return SquareInchesScreen(sqaureInches: inputValue);
+      case 'Pinta':
+        return const Text('Pinta');
       case 'Pieˆ2':
       // return SquareFootScreen(squareFoot: inputValue);
       case 'Yardaˆ2':
