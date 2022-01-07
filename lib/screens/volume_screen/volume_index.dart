@@ -224,7 +224,7 @@ class RenderOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (option) {
-      //solids
+      //* Solids
       case 'Pulgadaˆ3':
         return CubicInchesScreen(cubicInchesInput: inputValue);
       case 'Pieˆ3':
@@ -233,16 +233,43 @@ class RenderOption extends StatelessWidget {
       // return SquareYardScreen(squareYardInput: inputValue);
       case 'Acre-Pie':
         return AcreFootScreen(acreFootInput: inputValue);
-      case 'Rood':
+      case 'Millaˆ3':
       // return RoodScreen(roodInput: inputValue);
-      case 'Acre':
+      //* Dry
+      case 'Pinta':
       // return AcreScreen(acreInput: inputValue);
-      case 'Homestead':
+      case 'Cuarto (US)':
       // return HomesteadScreen(homeSteadInput: inputValue);
-      case 'Millaˆ2':
+      case 'Cuarto (UK)':
       // return SquareMileScreen(squareMileInput: inputValue);
-      case 'Leguaˆ2':
+      case 'Galón':
       // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Peck (US)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Peck (UK)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Bushel (US)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Bushel (UK)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      //* Liquids
+      case 'Minim (US)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Minim (UK)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Dracma Líquido':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Onza Líquida (US)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Onza Líquida (UK)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Barril (US)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Barril (UK)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      case 'Barril (Petroleo)':
+      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+
       default:
         return const Text('Elige una opción');
     }
