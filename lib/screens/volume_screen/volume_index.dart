@@ -239,7 +239,7 @@ class RenderOption extends StatelessWidget {
       case 'Pinta':
         return PintScreen(pintInput: inputValue);
       case 'Cuarto (US)':
-      // return HomesteadScreen(homeSteadInput: inputValue);
+        return QuartUSScreen(quartUSInput: inputValue);
       case 'Cuarto (UK)':
       // return SquareMileScreen(squareMileInput: inputValue);
       case 'Galón':

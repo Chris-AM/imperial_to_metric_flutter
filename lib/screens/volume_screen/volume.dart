@@ -4,3 +4,4 @@ export 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/cu
 export 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/cubic_mile_screen/cubic_mile_screen.dart';
 export 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/cubic_yard_screen/cubic_yard_screen.dart';
 export 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/pint_screen/pint_screen.dart';
+export 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/quart_us_screen/quart_us_screen.dart';

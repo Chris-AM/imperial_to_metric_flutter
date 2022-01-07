@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/acre_foot_screen/acre_foot_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/quart_us_screen/quart_us_calculation.dart';
 
-class AcreFootScreen extends StatelessWidget {
-  final String acreFootInput;
-  const AcreFootScreen({Key? key, required this.acreFootInput})
-      : super(key: key);
+class QuartUSScreen extends StatelessWidget {
+  final String quartUSInput;
+  const QuartUSScreen({Key? key, required this.quartUSInput}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +11,8 @@ class AcreFootScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Acre-Pie'),
-          AcreFootToMetric(acreFoot: acreFootInput),
+          const Text('Cuarto (US)'),
+          QuartUSToMetric(quartUS: quartUSInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -29,12 +28,12 @@ class AcreFootScreen extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
-                   children: const [
-                      Text(' Bushel (UK)'),
-                      Text(' Bushel (US)'),
-                      Text(' Galón'),
-                      Text(' Cuarto Líquido (UK)'),
-                      Text(' Cuarto Líquido (US)')
+                    children: const [
+                      Text('0.1212 Peck (UK)'),
+                      Text('0.125 Peck (US)'),
+                      Text('0.25 Galón'),
+                      Text('0.8326741846 Cuarto (UK)'),
+                      Text('2 Pinta')
                     ],
                   ),
                 ),
