@@ -12,7 +12,8 @@ class VolumeScreen extends StatefulWidget {
 class _VolumeScreenState extends State<VolumeScreen> {
   //* this variable holds the value of the selected DropdownButton
   String _currentOption = 'Elige una opción';
-  String _tipeValue = 'Tipo de Volumen';
+  String _inputValue = '';
+  String _volumeType = 'Tipo de Volumen';
   bool _disabledDropdown = true;
   List<DropdownMenuItem<String>> menuItems = [];
   final solids = {
@@ -90,7 +91,7 @@ class _VolumeScreenState extends State<VolumeScreen> {
       populateLiquids();
     }
     setState(() {
-      _tipeValue = _value;
+      _volumeType = _value;
       _disabledDropdown = false;
     });
   }
@@ -133,7 +134,7 @@ class _VolumeScreenState extends State<VolumeScreen> {
                         const TextInputType.numberWithOptions(decimal: true),
                     onChanged: (inputValue) {
                       setState(() {
-                        _tipeValue = (inputValue).replaceAll(',', '.');
+                        _inputValue = (inputValue).replaceAll(',', '.');
                       });
                     },
                     validator: (inputValue) {
@@ -188,7 +189,7 @@ class _VolumeScreenState extends State<VolumeScreen> {
                       ),
                     ],
                     onChanged: (_value) => valueChanged(_value),
-                    hint: Text(_tipeValue),
+                    hint: Text(_volumeType),
                   ),
                 ),
                 Padding(
@@ -207,7 +208,7 @@ class _VolumeScreenState extends State<VolumeScreen> {
           ),
           RenderOption(
             option: _currentOption,
-            inputValue: _tipeValue,
+            inputValue: _inputValue,
           ),
         ],
       ),
