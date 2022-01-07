@@ -33,7 +33,7 @@ class AcreFootScreen extends StatelessWidget {
                       Text('43560 Pieˆ3'),
                       Text('75271680 Pulgadaˆ3'),
                       Text('0.0000002959280303 Millaˆ3'),
-                      Text('Yardaˆ3'),
+                      Text('1613.3333333 Yardaˆ3'),
                     ],
                   ),
                 ),
