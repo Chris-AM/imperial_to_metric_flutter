@@ -2,3 +2,4 @@ export 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/ac
 export 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/cubic_inches_screen/cubic_inches_screen.dart';
 export 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/cubic_foot_screen/cubic_foot_screen.dart';
 export 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/cubic_mile_screen/cubic_mile_screen.dart';
+export 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/cubic_yard_screen/cubic_yard_screen.dart';

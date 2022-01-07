@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/screens/surface.screen/acre_screen/acre_calculation.dart';
 
-class AcreScreen extends StatelessWidget {
-  final String acreInput;
-  const AcreScreen({Key? key, required this.acreInput}) : super(key: key);
+class CubicYardScreen extends StatelessWidget {
+  final String cubicYardInput;
+  const CubicYardScreen({Key? key, required this.cubicYardInput})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +12,8 @@ class AcreScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Acre'),
-          AcreToMetric(acre: acreInput),
+          const Text('Yardaˆ3'),
+          AcreToMetric(acre: cubicYardInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -29,11 +30,9 @@ class AcreScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('0.0015625 Millasˆ2'),
-                      Text('4840 Yardasˆ2'),
-                      Text('43560 Piesˆ2'),
-                      Text('6272640 Pulgadasˆ2'),
-                      Text('4 Rood')
+                      Text('147197952000 Pieˆ3'),
+                      Text('46656 Pulgadaˆ3'),
+                      Text('0.0006198347 Acre-Pie'),
                     ],
                   ),
                 ),
