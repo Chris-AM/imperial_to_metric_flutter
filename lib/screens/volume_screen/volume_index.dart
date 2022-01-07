@@ -24,7 +24,7 @@ class _VolumeScreenState extends State<VolumeScreen> {
   final dries = {
     '1': 'Pinta',
     '2': 'Cuarto (US)',
-    '3': 'cuarto (UK)',
+    '3': 'Cuarto (UK)',
     '5': 'Galón',
     '6': 'Peck (US)',
     '7': 'Peck (UK)',
@@ -32,13 +32,16 @@ class _VolumeScreenState extends State<VolumeScreen> {
     '9': 'Bushel (UK) ',
   };
   final liquids = {
-    '1': 'Minim',
-    '2': 'Dracma Líquido',
-    '3': 'Onza Líquida',
-    '4': 'Gill',
-    '5': 'Cuarto',
-    '6': 'Galón',
-    '7': 'Barril',
+    '1': 'Minim (US)',
+    '2': 'Minim (UK)',
+    '3': 'Dracma Líquido',
+    '4': 'Onza Líquida (US)',
+    '5': 'Onza Líquida (UK)',
+    '6': 'Gill (US)',
+    '7': 'Gill (UK)',
+    '8': 'Barril (US)',
+    '9': 'Barril (UK)',
+    '10': 'Barril (Petroleo)',
   };
 
   void populateSolids() {
