@@ -29,11 +29,12 @@ class AcreFootScreen extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
-                    children: const [
-                      Text('43560 Pieˆ3'),
-                      Text('75271680 Pulgadaˆ3'),
-                      Text('0.0000002959280303 Millaˆ3'),
-                      Text('1613.3333333 Yardaˆ3'),
+                   children: const [
+                      Text(' Bushel (UK)'),
+                      Text(' Bushel (US)'),
+                      Text(' Galón'),
+                      Text(' Cuarto Líquido (UK)'),
+                      Text(' Cuarto Líquido (US)')
                     ],
                   ),
                 ),
