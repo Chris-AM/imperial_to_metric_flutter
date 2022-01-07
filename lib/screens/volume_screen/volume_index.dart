@@ -225,10 +225,10 @@ class RenderOption extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (option) {
       //solids
-      case 'Pinta':
-        return const Text('Pinta');
+      case 'Pulgadaˆ3':
+        return CubicInchesScreen(cubicInchesInput: inputValue);
       case 'Pieˆ2':
-      // return SquareFootScreen(squareFoot: inputValue);
+      //return ;
       case 'Yardaˆ2':
       // return SquareYardScreen(squareYardInput: inputValue);
       case 'Acre-Pie':
