@@ -1,28 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class AcreToMetric extends StatefulWidget {
-  final String acre;
-  const AcreToMetric({Key? key, required this.acre}) : super(key: key);
+class CubicMileToMetric extends StatefulWidget {
+  final String cubicMile;
+  const CubicMileToMetric({Key? key, required this.cubicMile})
+      : super(key: key);
 
   @override
-  _AcreToMetricState createState() => _AcreToMetricState();
+  _CubicMileToMetricState createState() => _CubicMileToMetricState();
 }
 
-class _AcreToMetricState extends State<AcreToMetric> {
+class _CubicMileToMetricState extends State<CubicMileToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.acre;
+    var inputOption = widget.cubicMile;
     var convertedInput = double.parse(inputOption);
-    double mmCb = double.parse((convertedInput * 0).toStringAsFixed(5));
-    double cmCb = double.parse((convertedInput * 0).toStringAsFixed(5));
-    double mCb = double.parse((convertedInput * 0).toStringAsFixed(5));
-    double litre = double.parse((convertedInput * 0).toStringAsFixed(5));
-    double kmCb = double.parse((convertedInput * 0).toStringAsFixed(10));
+    String mmCb =
+        (convertedInput * 4168181825440539600).toStringAsExponential();
+    double cmCb =
+        double.parse((convertedInput * 4168181825440540).toStringAsFixed(5));
+    double mCb =
+        double.parse((convertedInput * 4168181825.4).toStringAsFixed(5));
+    double litre =
+        double.parse((convertedInput * 4168181825441).toStringAsFixed(5));
+    double kmCb =
+        double.parse((convertedInput * 4.1681818254).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
-      content: Text('$mmCb mmˆ3\n$cmCb dmˆ3\n$mCb mˆ3\n$litre litros\n$kmCb kmˆ3'),
+      content:
+          Text('$mmCb mmˆ3\n$cmCb dmˆ3\n$mCb mˆ3\n$litre litros\n$kmCb kmˆ3'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
