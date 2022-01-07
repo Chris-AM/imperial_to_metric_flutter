@@ -14,18 +14,15 @@ class _AcreToMetricState extends State<AcreToMetric> {
   void _convertion(BuildContext context) {
     var inputOption = widget.acre;
     var convertedInput = double.parse(inputOption);
-    double cmSqr =
-        double.parse((convertedInput * 40468564.224).toStringAsFixed(5));
-    double dmSqr =
-        double.parse((convertedInput * 404685.64224).toStringAsFixed(5));
-    double mSqr =
-        double.parse((convertedInput * 4046.8564224).toStringAsFixed(5));
-    double kmSqr =
-        double.parse((convertedInput * 0.0040468564).toStringAsFixed(10));
+    double mmCb = double.parse((convertedInput * 0).toStringAsFixed(5));
+    double cmCb = double.parse((convertedInput * 0).toStringAsFixed(5));
+    double mCb = double.parse((convertedInput * 0).toStringAsFixed(5));
+    double litre = double.parse((convertedInput * 0).toStringAsFixed(5));
+    double kmCb = double.parse((convertedInput * 0).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
-      content: Text('$cmSqr cmˆ2\n$dmSqr dmˆ2\n$mSqr mˆ2\n$kmSqr kmˆ2'),
+      content: Text('$mmCb mmˆ3\n$cmCb dmˆ3\n$mCb mˆ3\n$litre litros\n$kmCb kmˆ3'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
