@@ -11,7 +11,7 @@ class PintScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Acre-Pie'),
+          const Text('Pinta'),
           PintToMetric(pint: pintInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
@@ -29,11 +29,11 @@ class PintScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text(' Bushel (UK)'),
-                      Text(' Bushel (US)'),
-                      Text(' Galón'),
-                      Text(' Cuarto Líquido (UK)'),
-                      Text(' Cuarto Líquido (US)')
+                      Text('0,015625 Bushel (UK)'),
+                      Text('0,015139671536419 Bushel (US)'),
+                      Text('0.125 Galón'),
+                      Text('0.5 Cuarto (UK)'),
+                      Text('0.6004749628 Cuarto (US)')
                     ],
                   ),
                 ),
