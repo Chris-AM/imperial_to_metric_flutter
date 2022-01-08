@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/quart_us_screen/quart_us_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/volume_screen/liquid_screen/minim_us_screen/minim_us_calculation.dart';
 
 class MinimUSScreen extends StatelessWidget {
   final String minimUSInput;
@@ -12,7 +12,7 @@ class MinimUSScreen extends StatelessWidget {
       child: Column(
         children: [
           const Text('Cuarto (US)'),
-          QuartUSToMetric(quartUS: minimUSInput),
+          MinimUSToMetric(minimUS: minimUSInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -29,12 +29,10 @@ class MinimUSScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('Barril (UK)'),
-                      Text('Barril (US)'),
-                      Text('Onza Líquida (UK)'),
-                      Text('Onza Líquida (US)'),
-                      Text('Minim (UK)'),
-                      Text('Minim (US)'),
+                      Text('0.0021684224 Onza Líquida (UK)'),
+                      Text('0.0020833333 Onza Líquida (US)'),
+                      Text('1.0408427308 Minim (UK)'),
+                      Text('0.0166666667 Dracma Líquido'),
                     ],
                   ),
                 ),
