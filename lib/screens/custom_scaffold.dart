@@ -6,7 +6,7 @@ import 'package:imperial_to_metric_flutter/screens/home_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/length_screen/lenght_index.dart';
 import 'package:imperial_to_metric_flutter/screens/mass_screen/mass_index.dart';
 import 'package:imperial_to_metric_flutter/screens/surface.screen/surface_index.dart';
-import 'package:imperial_to_metric_flutter/screens/temperature.screen/temperature.dart';
+import 'package:imperial_to_metric_flutter/screens/temperature_screen/temperature_screen.dart';
 import 'package:imperial_to_metric_flutter/screens/volume_screen/volume_index.dart';
 
 class CustomScaffold extends StatefulWidget {
@@ -53,11 +53,11 @@ class _CustomScaffoldState extends State<CustomScaffold> {
           //*Mass
           const MassScreen(),
           //*surface
-          SurfaceScreen(),
+          const SurfaceScreen(),
           //*volume
-          VolumeScreen(),
+          const VolumeScreen(),
           //*temperature
-          TemperatureScreen(),
+          const TemperatureScreen(),
         ],
       ),
 
