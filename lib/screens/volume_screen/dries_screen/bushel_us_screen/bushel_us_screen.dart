@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/acre_foot_screen/acre_foot_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/bushel_us_screen/bushel_us_calculation.dart';
 
 class BushelUSScreen extends StatelessWidget {
   final String bushelUSInput;
@@ -12,8 +12,8 @@ class BushelUSScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Acre-Pie'),
-          AcreFootToMetric(acreFoot: bushelUSInput),
+          const Text('Bushel (US)'),
+          BushelUSToMetric(bushelUS: bushelUSInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -29,12 +29,12 @@ class BushelUSScreen extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
-                   children: const [
-                      Text(' Bushel (UK)'),
-                      Text(' Bushel (US)'),
-                      Text(' Galón'),
-                      Text(' Cuarto Líquido (UK)'),
-                      Text(' Cuarto Líquido (US)')
+                    children: const [
+                      Text('0.96893897833083 Bushel (UK)'),
+                      Text('64 Pinta'),
+                      Text('8 Galón'),
+                      Text('31,006047306587 Cuarto (UK)'),
+                      Text('32 Cuarto (US)')
                     ],
                   ),
                 ),
