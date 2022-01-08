@@ -3,7 +3,8 @@ import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/qu
 
 class BarrelOilScreen extends StatelessWidget {
   final String barrelOilInput;
-  const BarrelOilScreen({Key? key, required this.barrelOilInput}) : super(key: key);
+  const BarrelOilScreen({Key? key, required this.barrelOilInput})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +30,12 @@ class BarrelOilScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('Barril (UK)'),
-                      Text('Barril (US)'),
-                      Text('Onza Líquida (UK)'),
-                      Text('Onza Líquida (US)'),
-                      Text('Minim (UK)'),
-                      Text('Minim (US)'),
+                      Text('0.9714532154 Barril (UK)'),
+                      Text('1.3333333333 Barril (US)'),
+                      Text('5595.5705207 Onza Líquida (UK)'),
+                      Text('5376 Onza Líquida (US)'),
+                      Text('2685873.8499 Minim (UK)'),
+                      Text('2580480 Minim (US)'),
                     ],
                   ),
                 ),

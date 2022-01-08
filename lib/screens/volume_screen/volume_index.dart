@@ -272,7 +272,7 @@ class RenderOption extends StatelessWidget {
       case 'Barril (UK)':
         return BarrelUKScreen(barrelUKInput: inputValue);
       case 'Barril (Petroleo)':
-      // return BarrelOilScreen(squareLeagueInput: inputValue);
+        return BarrelOilScreen(barrelOilInput: inputValue);
       default:
         return const Text('Elige una opción');
     }
