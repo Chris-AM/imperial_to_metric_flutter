@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class AcreFootToMetric extends StatefulWidget {
-  final String acreFoot;
-  const AcreFootToMetric({Key? key, required this.acreFoot}) : super(key: key);
+class PeckUKToMetric extends StatefulWidget {
+  final String peckUK;
+  const PeckUKToMetric({Key? key, required this.peckUK}) : super(key: key);
 
   @override
-  _AcreFootToMetricState createState() => _AcreFootToMetricState();
+  _PeckUKToMetricState createState() => _PeckUKToMetricState();
 }
 
-class _AcreFootToMetricState extends State<AcreFootToMetric> {
+class _PeckUKToMetricState extends State<PeckUKToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.acreFoot;
+    var inputOption = widget.peckUK;
     var convertedInput = double.parse(inputOption);
-    double mmCb =
-        double.parse((convertedInput * 1233481837548).toStringAsFixed(5));
-    double cmCb =
-        double.parse((convertedInput * 1233481837.548).toStringAsFixed(5));
-    double mCb =
-        double.parse((convertedInput * 1233.481837548).toStringAsFixed(5));
-    double litre =
-        double.parse((convertedInput * 1233481.837548).toStringAsFixed(5));
-    double kmCb = double.parse(
-        (convertedInput * 0.000001233481837548).toStringAsFixed(10));
+    double mmCb = double.parse((convertedInput * 9092180).toStringAsFixed(5));
+    double cmCb = double.parse((convertedInput * 9092.18).toStringAsFixed(5));
+    double mCb = double.parse((convertedInput * 0.00909218).toStringAsFixed(5));
+    double litre = double.parse((convertedInput * 9.09218).toStringAsFixed(5));
+    double kmCb =
+        double.parse((convertedInput * 9.09218e-12).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
