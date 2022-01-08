@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/acre_foot_screen/acre_foot_calculation.dart';
 
-class AcreFootScreen extends StatelessWidget {
-  final String acreFootInput;
-  const AcreFootScreen({Key? key, required this.acreFootInput})
+class BushelUKScreen extends StatelessWidget {
+  final String bushelUKInput;
+  const BushelUKScreen({Key? key, required this.bushelUKInput})
       : super(key: key);
 
   @override
@@ -13,7 +13,7 @@ class AcreFootScreen extends StatelessWidget {
       child: Column(
         children: [
           const Text('Acre-Pie'),
-          AcreFootToMetric(acreFoot: acreFootInput),
+          AcreFootToMetric(acreFoot: bushelUKInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
