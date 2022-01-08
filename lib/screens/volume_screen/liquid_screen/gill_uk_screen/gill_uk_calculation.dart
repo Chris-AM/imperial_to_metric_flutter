@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class QuartUSToMetric extends StatefulWidget {
-  final String quartUS;
-  const QuartUSToMetric({Key? key, required this.quartUS}) : super(key: key);
+class GillUKToMetric extends StatefulWidget {
+  final String gillUK;
+  const GillUKToMetric({Key? key, required this.gillUK}) : super(key: key);
 
   @override
-  _QuartUSToMetricState createState() => _QuartUSToMetricState();
+  _GillUKToMetricState createState() => _GillUKToMetricState();
 }
 
-class _QuartUSToMetricState extends State<QuartUSToMetric> {
+class _GillUKToMetricState extends State<GillUKToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.quartUS;
+    var inputOption = widget.gillUK;
     var convertedInput = double.parse(inputOption);
     double mmCb =
         double.parse((convertedInput * 946352.946).toStringAsFixed(5));
