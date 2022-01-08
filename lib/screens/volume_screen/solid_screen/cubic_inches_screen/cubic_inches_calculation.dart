@@ -27,7 +27,7 @@ class _CubicInchesToMetricState extends State<CubicInchesToMetric> {
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
       content:
-          Text('$mmCb mmˆ3\n$cmCb dmˆ3\n$mCb mˆ3\n$litre litros\n$kmCb kmˆ3'),
+          Text('$mmCb mmˆ3\n$cmCb cmˆ3\n$mCb mˆ3\n$litre litros\n$kmCb kmˆ3'),
       actions: <Widget>[
         TextButton(
           onPressed: () {
