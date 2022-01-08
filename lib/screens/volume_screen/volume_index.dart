@@ -31,7 +31,7 @@ class _VolumeScreenState extends State<VolumeScreen> {
     '6': 'Peck (US)',
     '7': 'Peck (UK)',
     '8': 'Bushel (US)',
-    '9': 'Bushel (UK) ',
+    '9': 'Bushel (UK)',
   };
   final liquids = {
     '1': 'Minim (US)',
@@ -251,10 +251,10 @@ class RenderOption extends StatelessWidget {
       case 'Bushel (US)':
         return BushelUSScreen(bushelUSInput: inputValue);
       case 'Bushel (UK)':
-      // return BushelUKScreen(squareLeagueInput: inputValue);
+        return BushelUKScreen(bushelUKInput: inputValue);
       //* Liquids
       case 'Minim (US)':
-      // return MinimUSScreen(squareLeagueInput: inputValue);
+
       case 'Minim (UK)':
       // return MinimScreen(squareLeagueInput: inputValue);
       case 'Dracma Líquido':
