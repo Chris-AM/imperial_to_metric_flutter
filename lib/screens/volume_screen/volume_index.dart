@@ -243,9 +243,9 @@ class RenderOption extends StatelessWidget {
       case 'Cuarto (UK)':
         return QuartUKScreen(quartUKInput: inputValue);
       case 'Galón':
-      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+       return GallonScreen(gallonInput: inputValue);
       case 'Peck (US)':
-      // return SquareLeagueScreen(squareLeagueInput: inputValue);
+      // return PeckUSScreen(peckUSInput: inputValue);
       case 'Peck (UK)':
       // return SquareLeagueScreen(squareLeagueInput: inputValue);
       case 'Bushel (US)':
