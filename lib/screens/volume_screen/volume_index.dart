@@ -268,7 +268,7 @@ class RenderOption extends StatelessWidget {
       case 'Gill (UK)':
         return GillUKScreen(gillUKInput: inputValue);
       case 'Barril (US)':
-      // return BarrelUSScreen(squareLeagueInput: inputValue);
+        return BarrelUSScreen(barrelUSInput: inputValue);
       case 'Barril (UK)':
       // return BarrelUKScreen(squareLeagueInput: inputValue);
       case 'Barril (Petroleo)':
