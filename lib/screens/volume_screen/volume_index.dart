@@ -256,7 +256,7 @@ class RenderOption extends StatelessWidget {
       case 'Minim (US)':
         return MinimUSScreen(minimUSInput: inputValue);
       case 'Minim (UK)':
-      // return MinimScreen(squareLeagueInput: inputValue);
+        return MinimUKScreen(minimUKInput: inputValue);
       case 'Dracma Líquido':
       // return LiquidDramScreen(squareLeagueInput: inputValue);
       case 'Onza Líquida (US)':

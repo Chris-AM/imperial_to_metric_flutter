@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
 
-class QuartUSToMetric extends StatefulWidget {
-  final String quartUS;
-  const QuartUSToMetric({Key? key, required this.quartUS}) : super(key: key);
+class MinimUKToMetric extends StatefulWidget {
+  final String minimUK;
+  const MinimUKToMetric({Key? key, required this.minimUK}) : super(key: key);
 
   @override
-  _QuartUSToMetricState createState() => _QuartUSToMetricState();
+  _MinimUKToMetricState createState() => _MinimUKToMetricState();
 }
 
-class _QuartUSToMetricState extends State<QuartUSToMetric> {
+class _MinimUKToMetricState extends State<MinimUKToMetric> {
   //* Converion Logic
   void _convertion(BuildContext context) {
-    var inputOption = widget.quartUS;
+    var inputOption = widget.minimUK;
     var convertedInput = double.parse(inputOption);
     double mmCb =
-        double.parse((convertedInput * 946352.946).toStringAsFixed(5));
+        double.parse((convertedInput * 59.193880208).toStringAsFixed(5));
     double cmCb =
-        double.parse((convertedInput * 946.352946).toStringAsFixed(5));
+        double.parse((convertedInput * 0.0591938802).toStringAsFixed(5));
     double mCb =
-        double.parse((convertedInput * 0.0009463529).toStringAsFixed(5));
+        double.parse((convertedInput * 5.91938802e-8).toStringAsFixed(5));
     double litre =
-        double.parse((convertedInput * 0.946352946).toStringAsFixed(5));
+        double.parse((convertedInput * 0.0000591939).toStringAsFixed(5));
     double kmCb =
-        double.parse((convertedInput * 9.463529459e-13).toStringAsFixed(20));
+        double.parse((convertedInput * 5.91938802e-17).toStringAsFixed(20));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
