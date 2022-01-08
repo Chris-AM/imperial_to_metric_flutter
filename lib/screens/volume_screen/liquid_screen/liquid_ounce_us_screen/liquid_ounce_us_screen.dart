@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/quart_us_screen/quart_us_calculation.dart';
+import 'package:imperial_to_metric_flutter/screens/volume_screen/liquid_screen/liquid_ounce_us_screen/liquid_ounce_us_calculation.dart';
 
 class LiquidOunceUSScreen extends StatelessWidget {
   final String liquidOunceUSInput;
-  const LiquidOunceUSScreen({Key? key, required this.liquidOunceUSInput}) : super(key: key);
+  const LiquidOunceUSScreen({Key? key, required this.liquidOunceUSInput})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +12,8 @@ class LiquidOunceUSScreen extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
-          const Text('Cuarto (US)'),
-          QuartUSToMetric(quartUS: liquidOunceUSInput),
+          const Text('Onza Líquida (US)'),
+          LiquidOunceUSToMetric(liquidOunceUS: liquidOunceUSInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,
@@ -29,12 +30,12 @@ class LiquidOunceUSScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     children: const [
-                      Text('Barril (UK)'),
-                      Text('Barril (US)'),
-                      Text('Onza Líquida (UK)'),
-                      Text('Onza Líquida (US)'),
-                      Text('Minim (UK)'),
-                      Text('Minim (US)'),
+                      Text('0.0001807019 Barril (UK)'),
+                      Text('0.0002480159 Barril (US)'),
+                      Text('0.0001860119 Barril (Petroleo)'),
+                      Text('1.0408427308 Onza Líquida (UK)'),
+                      Text('499.60451078 Minim (UK)'),
+                      Text('480 Minim (US)'),
                     ],
                   ),
                 ),
