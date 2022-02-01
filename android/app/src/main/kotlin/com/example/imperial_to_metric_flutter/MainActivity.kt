@@ -1,4 +1,4 @@
-package com.example.imperial_to_metric_flutter
+package com.chrisam.flutterimpmetcalc
 
 import io.flutter.embedding.android.FlutterActivity
 
