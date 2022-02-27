@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 class SquareYardToMetric extends StatefulWidget {
   final String squareYard;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/fathom_screen/fathom_calculator.dart';
+import 'package:calculadora_imp_met/screens/length_screen/fathom_screen/fathom_calculator.dart';
 
 class FathomScreen extends StatelessWidget {
   final String fathomInput;

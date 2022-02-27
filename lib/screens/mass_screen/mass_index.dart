@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/mass.dart';
+import 'package:calculadora_imp_met/screens/mass_screen/mass.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 class MassScreen extends StatefulWidget {

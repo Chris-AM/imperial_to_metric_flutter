@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/temperature_screen/fahrenheit_screen/fahrenheit_calculation.dart';
+import 'package:calculadora_imp_met/screens/temperature_screen/fahrenheit_screen/fahrenheit_calculation.dart';
 
 class FahrenheitScreen extends StatelessWidget {
   final String fahrenheitInput;

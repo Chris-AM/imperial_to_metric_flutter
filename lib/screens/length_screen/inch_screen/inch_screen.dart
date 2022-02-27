@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/inch_screen/inch_calculation.dart';
+import 'package:calculadora_imp_met/screens/length_screen/inch_screen/inch_calculation.dart';
 
 class InchScreen extends StatelessWidget {
   final String inchesInput;

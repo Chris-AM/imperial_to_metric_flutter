@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/short_ton_screen/short_ton_calculation.dart';
+import 'package:calculadora_imp_met/screens/mass_screen/short_ton_screen/short_ton_calculation.dart';
 
 class ShortTonScreen extends StatelessWidget {
   final String shortTonInput;

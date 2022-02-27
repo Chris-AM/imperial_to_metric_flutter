@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 //* Rod to metric
 class RodToMetric extends StatefulWidget {
@@ -43,7 +43,7 @@ class _RodToMetricState extends State<RodToMetric> {
     );
   }
 
- void _badAlertDialog(BuildContext context) {
+  void _badAlertDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/temperature_screen/fahrenheit_screen/fahrenheit_screen.dart';
-import 'package:imperial_to_metric_flutter/screens/temperature_screen/kelvin_screen/kelvin_screen.dart';
+import 'package:calculadora_imp_met/screens/temperature_screen/fahrenheit_screen/fahrenheit_screen.dart';
+import 'package:calculadora_imp_met/screens/temperature_screen/kelvin_screen/kelvin_screen.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 class TemperatureScreen extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/furlong_screen/furlong_calculation.dart';
+import 'package:calculadora_imp_met/screens/length_screen/furlong_screen/furlong_calculation.dart';
 
 class FurlongScreen extends StatelessWidget {
   final String furlongInput;

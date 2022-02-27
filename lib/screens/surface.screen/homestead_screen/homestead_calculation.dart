@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 class HomesteadToMetric extends StatefulWidget {
   final String homestead;
-  const HomesteadToMetric({Key? key, required this.homestead}) : super(key: key);
+  const HomesteadToMetric({Key? key, required this.homestead})
+      : super(key: key);
 
   @override
   _HomesteadToMetricState createState() => _HomesteadToMetricState();

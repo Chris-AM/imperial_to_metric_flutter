@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/surface.screen/square_miles_screen/square_mile_calculation.dart';
+import 'package:calculadora_imp_met/screens/surface.screen/square_miles_screen/square_mile_calculation.dart';
 
 class SquareMileScreen extends StatelessWidget {
   final String squareMileInput;

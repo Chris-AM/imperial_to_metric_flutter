@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/surface.screen/square_inches_screen/square_inches_calculation.dart';
+import 'package:calculadora_imp_met/screens/surface.screen/square_inches_screen/square_inches_calculation.dart';
 
 class SquareInchesScreen extends StatelessWidget {
   final String sqaureInches;

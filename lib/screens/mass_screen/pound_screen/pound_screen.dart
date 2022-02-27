@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/pound_screen/pound_calculation.dart';
+import 'package:calculadora_imp_met/screens/mass_screen/pound_screen/pound_calculation.dart';
 
 class PoundScreen extends StatelessWidget {
   final String poundInput;

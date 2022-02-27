@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/grain_screen/grain_calculation.dart';
+import 'package:calculadora_imp_met/screens/mass_screen/grain_screen/grain_calculation.dart';
 
 class GrainScreen extends StatelessWidget {
   final String grainIput;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/rod_screen/rod_calculation.dart';
+import 'package:calculadora_imp_met/screens/length_screen/rod_screen/rod_calculation.dart';
 
 class RodScreen extends StatelessWidget {
   final String rodInput;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/chain_screen/chain_calculation.dart';
+import 'package:calculadora_imp_met/screens/length_screen/chain_screen/chain_calculation.dart';
 
 class ChainScreen extends StatelessWidget {
   final String chainInput;

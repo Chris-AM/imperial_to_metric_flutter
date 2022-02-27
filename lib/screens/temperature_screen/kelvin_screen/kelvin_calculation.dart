@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 class KelvinToMetric extends StatefulWidget {
   final String kelvin;
@@ -14,9 +14,7 @@ class _KelvinToMetricState extends State<KelvinToMetric> {
   void _convertion(BuildContext context) {
     var inputOption = widget.kelvin;
     var convertedInput = double.parse(inputOption);
-    double celcius =
-        double.parse((convertedInput - 273.15).toStringAsFixed(5));
-    
+    double celcius = double.parse((convertedInput - 273.15).toStringAsFixed(5));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),

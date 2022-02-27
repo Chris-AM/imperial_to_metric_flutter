@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.chrisam.flutterimpmetcalc">
    <application
-        android:label="imperial_to_metric_flutter"
+        android:label="Calculadora Imp-Met"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

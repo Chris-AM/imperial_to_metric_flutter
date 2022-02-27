@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 class PoundToMetric extends StatefulWidget {
   final String pound;
@@ -20,7 +20,6 @@ class _PoundToMetricState extends State<PoundToMetric> {
         double.parse((convertedInput * 453.59237).toStringAsFixed(5));
     double kgResult =
         double.parse((convertedInput * 0.45359237).toStringAsFixed(10));
-    
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),

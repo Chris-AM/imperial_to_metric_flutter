@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/surface.screen/square_yard_screen/square_yard_calculation.dart';
+import 'package:calculadora_imp_met/screens/surface.screen/square_yard_screen/square_yard_calculation.dart';
 
 class SquareYardScreen extends StatelessWidget {
   final String squareYardInput;
@@ -13,7 +13,7 @@ class SquareYardScreen extends StatelessWidget {
       child: Column(
         children: [
           const Text('Yardaˆ2'),
-         SquareYardToMetric(squareYard: squareYardInput),
+          SquareYardToMetric(squareYard: squareYardInput),
           Container(
             padding: const EdgeInsets.only(top: 20),
             width: 300,

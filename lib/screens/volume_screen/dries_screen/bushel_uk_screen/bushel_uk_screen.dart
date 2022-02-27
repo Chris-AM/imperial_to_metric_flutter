@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/bushel_uk_screen/bushel_uk_calculation.dart';
+import 'package:calculadora_imp_met/screens/volume_screen/dries_screen/bushel_uk_screen/bushel_uk_calculation.dart';
 
 class BushelUKScreen extends StatelessWidget {
   final String bushelUKInput;

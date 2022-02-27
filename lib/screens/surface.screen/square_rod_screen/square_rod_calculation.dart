@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 class SquareRodToMetric extends StatefulWidget {
   final String squareRod;
-  const SquareRodToMetric({Key? key, required this.squareRod}) : super(key: key);
+  const SquareRodToMetric({Key? key, required this.squareRod})
+      : super(key: key);
 
   @override
   _SquareRodToMetricState createState() => _SquareRodToMetricState();

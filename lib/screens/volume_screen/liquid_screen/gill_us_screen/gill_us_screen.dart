@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/quart_us_screen/quart_us_calculation.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/liquid_screen/gill_us_screen/gill_us_calculation.dart';
+import 'package:calculadora_imp_met/screens/volume_screen/dries_screen/quart_us_screen/quart_us_calculation.dart';
+import 'package:calculadora_imp_met/screens/volume_screen/liquid_screen/gill_us_screen/gill_us_calculation.dart';
 
 class GillUSScreen extends StatelessWidget {
   final String gillUSInput;

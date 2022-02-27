@@ -1,6 +1,6 @@
 {
-    "name": "imperial_to_metric_flutter",
-    "short_name": "imperial_to_metric_flutter",
+    "name": "calculadora_imp_met",
+    "short_name": "calculadora_imp_met",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 class SquareInchesToMetric extends StatefulWidget {
   final String squareInches;
-  const SquareInchesToMetric({Key? key, required this.squareInches}) : super(key: key);
+  const SquareInchesToMetric({Key? key, required this.squareInches})
+      : super(key: key);
 
   @override
   _SquareInchesToMetricState createState() => _SquareInchesToMetricState();
@@ -14,10 +15,8 @@ class _SquareInchesToMetricState extends State<SquareInchesToMetric> {
   void _convertion(BuildContext context) {
     var inputOption = widget.squareInches;
     var convertedInput = double.parse(inputOption);
-    double cmSqr =
-        double.parse((convertedInput * 6.4516).toStringAsFixed(5));
-    double dmSqr =
-        double.parse((convertedInput * 0.064516).toStringAsFixed(5));
+    double cmSqr = double.parse((convertedInput * 6.4516).toStringAsFixed(5));
+    double dmSqr = double.parse((convertedInput * 0.064516).toStringAsFixed(5));
     double mSqr =
         double.parse((convertedInput * 0.00064516).toStringAsFixed(5));
     double kmSqr =

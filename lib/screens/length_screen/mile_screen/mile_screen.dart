@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/length_screen/mile_screen/mile_calculation.dart';
+import 'package:calculadora_imp_met/screens/length_screen/mile_screen/mile_calculation.dart';
 
 class MileScreen extends StatelessWidget {
   final String mileInput;

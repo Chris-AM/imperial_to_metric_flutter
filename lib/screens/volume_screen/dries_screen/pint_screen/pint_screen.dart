@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/pint_screen/pint_calculation.dart';
+import 'package:calculadora_imp_met/screens/volume_screen/dries_screen/pint_screen/pint_calculation.dart';
 
 class PintScreen extends StatelessWidget {
   final String pintInput;

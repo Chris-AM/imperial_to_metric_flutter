@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/surface.screen/square_foot_screen/square_foot_calculation.dart';
+import 'package:calculadora_imp_met/screens/surface.screen/square_foot_screen/square_foot_calculation.dart';
 
 class SquareFootScreen extends StatelessWidget {
   final String squareFoot;

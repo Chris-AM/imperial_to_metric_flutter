@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 class GrainToMetric extends StatefulWidget {
   final String grain;
@@ -20,7 +20,6 @@ class _GrainToMetricState extends State<GrainToMetric> {
         double.parse((convertedInput * 0.06479891).toStringAsFixed(5));
     double kgResult =
         double.parse((convertedInput * 0.0000647989).toStringAsFixed(10));
-    
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),

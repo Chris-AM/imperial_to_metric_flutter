@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/mass_screen/quintal_screen/quintal_calculation.dart';
+import 'package:calculadora_imp_met/screens/mass_screen/quintal_screen/quintal_calculation.dart';
 
 class QuintalScreen extends StatelessWidget {
   final String quintalInput;

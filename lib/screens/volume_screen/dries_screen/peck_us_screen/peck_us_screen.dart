@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/peck_us_screen/peck_us_calculation.dart';
+import 'package:calculadora_imp_met/screens/volume_screen/dries_screen/peck_us_screen/peck_us_calculation.dart';
 
 class PeckUSScreen extends StatelessWidget {
   final String peckUsInput;

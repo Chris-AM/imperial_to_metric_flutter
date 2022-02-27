@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/dries_screen/quart_uk_screen/quart_uk_calculation.dart';
+import 'package:calculadora_imp_met/screens/volume_screen/dries_screen/quart_uk_screen/quart_uk_calculation.dart';
 
 class QuartUKScreen extends StatelessWidget {
   final String quartUKInput;
@@ -33,7 +33,6 @@ class QuartUKScreen extends StatelessWidget {
                       Text('0.032251773020664 Bushel (US)'),
                       Text('0.3002374814 Galón'),
                       Text('1.2009499255 Cuarto (US)'),
-                      
                     ],
                   ),
                 ),

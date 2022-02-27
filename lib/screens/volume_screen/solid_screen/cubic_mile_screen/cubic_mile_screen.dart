@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/screens/volume_screen/solid_screen/cubic_mile_screen/cubic_mile_calculation.dart';
+import 'package:calculadora_imp_met/screens/volume_screen/solid_screen/cubic_mile_screen/cubic_mile_calculation.dart';
 
 class CubicMileScreen extends StatelessWidget {
   final String cubicMileInput;

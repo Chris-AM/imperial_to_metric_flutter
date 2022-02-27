@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imperial_to_metric_flutter/helpers/error_dialog.dart';
+import 'package:calculadora_imp_met/helpers/error_dialog.dart';
 
 class PeckUSMetric extends StatefulWidget {
   final String peckUS;
@@ -14,16 +14,14 @@ class _PeckUSMetricState extends State<PeckUSMetric> {
   void _convertion(BuildContext context) {
     var inputOption = widget.peckUS;
     var convertedInput = double.parse(inputOption);
-    double mmCb =
-        double.parse((convertedInput * 8809767.6).toStringAsFixed(5));
-    double cmCb =
-        double.parse((convertedInput * 8809.7676).toStringAsFixed(5));
+    double mmCb = double.parse((convertedInput * 8809767.6).toStringAsFixed(5));
+    double cmCb = double.parse((convertedInput * 8809.7676).toStringAsFixed(5));
     double mCb =
         double.parse((convertedInput * 0.0088097676).toStringAsFixed(5));
     double litre =
         double.parse((convertedInput * 8.8097676).toStringAsFixed(5));
-    double kmCb = double.parse(
-        (convertedInput * 8.8097676e-12).toStringAsFixed(10));
+    double kmCb =
+        double.parse((convertedInput * 8.8097676e-12).toStringAsFixed(10));
 
     var alertDialog = AlertDialog(
       title: const Text('sus resultados'),
