@@ -61,49 +61,49 @@ class _CustomScaffoldState extends State<CustomScaffold> {
       ),
 
       //* Tabs
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentPage,
-        onTap: (int index) {
-          _pageController.jumpToPage(index);
-          setState(() {
-            currentPage = index;
-          });
-        },
-        //*style
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.blue,
-        unselectedFontSize: 10,
-        fixedColor: Colors.white,
-        selectedIconTheme: const IconThemeData(color: Colors.white),
-        unselectedIconTheme:
-            IconThemeData(color: Colors.white.withOpacity(0.5)),
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CustomIcons.length),
-            label: 'Longitud',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CustomIcons.mass),
-            label: 'Masa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CustomIcons.surface),
-            label: 'Superficie',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CustomIcons.volume),
-            label: 'Volumen',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CustomIcons.temp),
-            label: 'Temperatura',
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   currentIndex: currentPage,
+      //   onTap: (int index) {
+      //     _pageController.jumpToPage(index);
+      //     setState(() {
+      //       currentPage = index;
+      //     });
+      //   },
+      //   //*style
+      //   type: BottomNavigationBarType.fixed,
+      //   backgroundColor: Colors.blue,
+      //   unselectedFontSize: 10,
+      //   fixedColor: Colors.white,
+      //   selectedIconTheme: const IconThemeData(color: Colors.white),
+      //   unselectedIconTheme:
+      //       IconThemeData(color: Colors.white.withOpacity(0.5)),
+      //   items: const [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home),
+      //       label: 'Home',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(CustomIcons.length),
+      //       label: 'Longitud',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(CustomIcons.mass),
+      //       label: 'Masa',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(CustomIcons.surface),
+      //       label: 'Superficie',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(CustomIcons.volume),
+      //       label: 'Volumen',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(CustomIcons.temp),
+      //       label: 'Temperatura',
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
