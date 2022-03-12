@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:calculadora_imp_met/custom_icons_icons.dart';
 
 import 'package:calculadora_imp_met/screens/home_screen.dart';
 import 'package:calculadora_imp_met/screens/length_screen/lenght_index.dart';
@@ -7,6 +6,7 @@ import 'package:calculadora_imp_met/screens/mass_screen/mass_index.dart';
 import 'package:calculadora_imp_met/screens/surface.screen/surface_index.dart';
 import 'package:calculadora_imp_met/screens/temperature_screen/temperature_screen.dart';
 import 'package:calculadora_imp_met/screens/volume_screen/volume_index.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomScaffold extends StatefulWidget {
   const CustomScaffold({Key? key}) : super(key: key);
@@ -61,49 +61,49 @@ class _CustomScaffoldState extends State<CustomScaffold> {
       ),
 
       //* Tabs
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: currentPage,
-      //   onTap: (int index) {
-      //     _pageController.jumpToPage(index);
-      //     setState(() {
-      //       currentPage = index;
-      //     });
-      //   },
-      //   //*style
-      //   type: BottomNavigationBarType.fixed,
-      //   backgroundColor: Colors.blue,
-      //   unselectedFontSize: 10,
-      //   fixedColor: Colors.white,
-      //   selectedIconTheme: const IconThemeData(color: Colors.white),
-      //   unselectedIconTheme:
-      //       IconThemeData(color: Colors.white.withOpacity(0.5)),
-      //   items: const [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(CustomIcons.length),
-      //       label: 'Longitud',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(CustomIcons.mass),
-      //       label: 'Masa',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(CustomIcons.surface),
-      //       label: 'Superficie',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(CustomIcons.volume),
-      //       label: 'Volumen',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(CustomIcons.temp),
-      //       label: 'Temperatura',
-      //     ),
-      //   ],
-      // ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentPage,
+        onTap: (int index) {
+          _pageController.jumpToPage(index);
+          setState(() {
+            currentPage = index;
+          });
+        },
+        //*style
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.blue,
+        unselectedFontSize: 10,
+        fixedColor: Colors.white,
+        selectedIconTheme: const IconThemeData(color: Colors.white),
+        unselectedIconTheme:
+            IconThemeData(color: Colors.white.withOpacity(0.5)),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.ruler),
+            label: 'Longitud',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.dumbbell),
+            label: 'Masa',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.rulerCombined),
+            label: 'Superficie',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.water),
+            label: 'Volumen',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.thermometerHalf),
+            label: 'Temperatura',
+          ),
+        ],
+      ),
     );
   }
 }

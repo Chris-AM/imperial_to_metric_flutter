@@ -14,6 +14,7 @@ dependencies:
 
   cupertino_icons: ^1.0.4
   keyboard_actions: ^3.4.7
+  font_awesome_flutter: ^9.2.0
 
 dev_dependencies:
   flutter_test:
@@ -35,16 +36,5 @@ flutter:
 
   assets:
     - assets/icons/output-onlinepngtools.png
-    - assets/icons/fonts/CustomIcons.ttf
     - assets/images/loading.gif
     - assets/images/logo_imp_500_x_550.png
-
-  fonts:
-    - family: CustomIcons
-      fonts:
-        - asset: assets/icons/fonts/CustomIcons.ttf
-          weight: 400
-          style: normal
-        - asset: assets/icons/fonts/CustomIcons.ttf
-          weight: 700
-          style: normal
